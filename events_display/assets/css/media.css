@@ -1,0 +1,289 @@
+@charset "UTF-8";
+@media(min-width:1200px) {
+}
+
+@media(max-width:1199px) {
+}
+
+@media(min-width:992px) {
+}
+
+@media(max-width:991px) {
+	.ms-navbar-white .navbar-header .navbar-brand {
+		/*border:#F00 solid 2px; */ /*Rojo*/
+	}
+}
+
+@media(min-width:768px) {
+	
+}
+
+@media(max-width:767px) {
+	.ms-navbar-white .navbar-header .navbar-brand {
+		/*border:#0F0 solid 2px;*/  /*Verde*/
+	}
+	.ms-hero-page .fp-tableCell {
+		vertical-align: top;
+	}
+}
+
+
+@media(min-width:576px) {
+	
+}
+
+
+@media(max-width:575px) {
+	.ms-navbar-white .navbar-header .navbar-brand {
+		/*border:#00F solid 2px; */ /*Azul*/
+	}
+}
+
+@media(max-width:550px) {
+	.ms-navbar-white .navbar-header .navbar-brand {
+		/*border:#FF0 solid 2px;*/  /*Amarillo*/
+	}
+}
+
+@media(max-width:500px) {
+	.ms-navbar-white .navbar-header .navbar-brand {
+		/*border:#0FF solid 2px;*/  /*Aqua*/
+	}
+	.no-mobile {
+		display:none !important;
+	}
+	.mobile {
+		display:block !important;
+	}
+	.mb-2 {
+		margin-bottom: 10px !important;
+		margin-bottom: 1rem !important;
+	}
+	h4 {
+		font-size: 28px;
+        font-size: 2.8rem;
+	}
+	.ms-hero-img-room {
+		/*background-image:url(../img/stage01-mobile2.jpg);*/
+		/*background-position: top left;
+		background-size:contain;*/
+	}
+	.ms-hero-page .fp-tableCell, #videos-section .fp-tableCell, #funcionamiento-ultracel .fp-tableCell {
+		vertical-align: top;
+	}
+	.intro-hero-full .intro-hero-full-content.bottom {
+		top: 40%;
+	}
+	#landing-sorteo .intro-hero-full .intro-hero-full-content.bottom {
+		top: 45%;
+	}
+	.ms-site-title-lg {
+		font-size: 22px;
+		font-size:2.2rem;
+	}
+	.logo-product{
+		width:200px;
+	}
+	.stage-product {
+		width:200px;
+		margin:0px auto;
+		bottom:0px;
+	}
+	
+	h2, h3, h4{
+       font-size: 20px;
+       font-size: 2.0rem;
+	   margin: .5rem 0 .5rem;
+	}
+	h6 {
+		margin: .5rem 0 .5rem;
+		font-weight:500;
+	}
+	.facial-list {
+		padding:0px 10px;
+		font-size:16px;
+		font-size: 1.6rem;
+	}
+	#aplicaciones, #aplicaciones2 {
+		height:auto;
+	}
+	#aplicacion-facial figure {
+		width:250px;
+		margin: 0px auto;
+	}
+	h5, .destacado, p.descripcion, #videos-section h6 {
+		font-size:12px;
+		font-size: 1.2rem;
+	}
+	#disparos {
+		width:200px;
+	}
+	.card {
+		margin-bottom:0px;
+	}
+	.clinic-cases-list li {
+		margin-bottom:5px;
+	}
+	#neocolagenesis figure {
+		width:100px;
+	}
+	.ms-footer-alt-color, .ms-footbar .ms-footbar-block {
+		margin:1rem 0;
+	}
+	address p{
+		margin-bottom: .5rem;
+	}
+	#porque-ultracel #full-ultracel figure img {
+		width:60px;
+		display:none;
+	}
+	#funcionamiento-ultracel figure img {
+		width:100px;
+	}
+	#funcionamiento-ultracel #full-ultracel figure img {
+		
+		display:none;
+	}
+	.list-mobile {
+		padding-left:15px;
+		line-height:18px;
+		line-height:1.8rem;
+	}
+	.lead {
+		font-size: 16px;
+        font-size: 1.6rem;
+		line-height: 20px;
+    line-height: 2rem;
+	}
+	.mb-4 {
+		margin-bottom:10px !important;
+		margin-bottom:1rem !important;
+	}
+	.mt-2 {
+		margin-top:10px !important;
+		margin-top:1rem !important;
+	}
+	.big-image figure img {
+		width:200px;
+	}
+	p.text-mobile {
+		font-size:14px;
+		font-size:1.4rem;
+		line-height:18px;
+		line-height:1.8rem;
+	}
+	.xs-image figure img {
+		width:70px;
+	}
+	.monalisa-soft h3, .monalisa-mild h3, .monalisa-hard h3, .monalisa-ultra h3{
+		color:#FFF;
+		font-weight:600;
+	}
+	.monalisa-soft h3{
+		background-color:#03bc15;
+		color:#FFF !important;
+	}
+	.monalisa-mild h3{
+		background-color:#bdbdbd;
+		color:#FFF !important;
+	}
+	.monalisa-hard h3{
+		background-color:#FA588A;
+		color:#FFF !important;
+	}
+	.monalisa-ultra h3{
+		background-color:#A901DB;
+		color:#FFF !important;
+	}
+	.detalles figure {
+	    width:100px;
+	    margin:0px auto;
+    }
+    .detalles-big figure {
+	    width:100px;
+	    margin:0px auto;
+    }
+	.plyr {
+		min-width:150px;
+	}
+	.mt-2-mobile{
+		margin-top:20px;
+	}
+	.slide01{
+	    background-image:url(../img/slides/coolshaping-slide-movil.jpg);
+    }
+    .slide02{
+	    background-image:url(../img/slides/lipocel-slide-movil.jpg);
+    }
+    .slide03{
+	    background-image:url(../img/slides/edgeone-slide-movil.jpg);
+    }
+	.slide04{
+	    background-image:url(../img/slides/sorteo-MONALISA-slide-movil.jpg);
+    }
+	.taller-MONALISA{
+	    background-image:url(../img/slides/taller-MONALISA-slide-movil.jpg);
+    }
+	.dermacosmetica-2019{
+	    background-image:url(../img/slides/dermacosmetica-slide-movil.jpg);
+    }
+    .carousel-header .carousel-control {
+	    top:50%;
+    }
+	.carousel-header .carousel-indicators {
+		display:none;
+	}
+	.next-contain {
+    
+    bottom: 20px;
+    display: inline-block;
+	}
+	#bases-sorteo {
+		height:auto !important;
+	}
+	#login-container .nav.nav-tabs li a {
+		padding: 1.5rem 5px;
+	}
+	.father-div {
+		height:auto !important;
+	}
+	.logo-product {
+		width:200px !important;
+		margin: 0px auto;
+	}
+	#funcionamiento-lipo1060 h6,
+	#frm-ultracel p,
+	#frm-ultracel h5,
+	#neocolagenesis p,
+	#ultra-delgado p {
+		font-size:16px;
+		line-height:20px;
+	}
+	#ventajas-LIPO1060 .tecno-vacuum,
+	#frm-ultracel .aplicadores-img{
+		width:120px;
+		height:auto;
+		margin:0px auto;
+	}
+	.grafica {
+		width:180px;
+		height:auto;
+		margin:0px auto;
+	}
+	.mt80-video-mobile {
+		margin-top: 100px;
+	}
+	#videos-section h6.txt-18 {
+		font-size:18px;
+	}
+	#data-sheet figure.logo-product {
+		width:150px !important;
+		display:none;
+	}
+	#data-sheet table {
+		line-height:16px;
+	}
+}
+
+
+

@@ -1,0 +1,340 @@
+/*------------------------
+		General
+------------------------*/
+
+.bg-mede-blue { background-image: url('../img/bg_mede_blue.jpg') !important; }
+
+.titleRow {
+	padding: 5rem 0;
+	text-align: center;
+	margin: 0 0 7rem;
+	background-position: center !important;
+	background-size: cover !important;
+}
+
+.titleRow h3 {
+	display: inline-block;
+	font-style: italic;
+	font-weight: 500;
+	color: #fff;
+	margin: 0;
+}
+
+.text-pink { color: #D4849E; }
+
+@media(min-width: 991px){
+	.lg-text-right { text-align: right !important; }
+}
+
+/*--------------- Main Page ---------------*/
+
+.mainEvts { margin-bottom: 0 !important; }
+.mainEvts .carousel-header .carousel-indicators { bottom: 0; }
+.mainEvts .next-contain { bottom: 35px; }
+.mainEvts .ms-hero-material-buttons:not(.next-contain) { 
+	display: inline-block; 
+	width: 60%;
+}
+
+@media (max-width: 767px) {
+	.mainEvts .carousel-header .carousel-control.right {
+		right: 3rem;
+		left: initial;
+	}
+
+	.mainEvts .carousel-header .carousel-control.left {
+		left: 3rem;
+		right: initial;
+	}
+}
+
+.mainEvt01 { background-image: url(../img/evts/banner_monalisa.jpg); }
+.mainEvt02 { background-image: url(../img/evts/banner_derma.jpg); }
+.mainEvt03 { background-image: url(../img/evts/banner_monalisa.jpg); }
+.mainEvt04 { background-image: url(../img/evts/banner_derma.jpg); }
+.mainEvt05 { background-image: url(../img/evts/banner_monalisa.jpg); }
+.mainEvt06 { background-image: url(../img/evts/banner_derma.jpg); }
+
+/*-----------------
+	Future Evts
+-----------------*/
+
+#future_events .card { box-shadow: none; }
+#future_events .card-body { border: 1px solid #093243; }
+
+#future_events .card.ownEvent .card-body { 
+	background-image: url('../img/bg_mede_card.jpg') !important;
+	background-size: cover;
+}
+
+#future_events .card h2 {
+	font-size: 2.8rem !important;
+	font-weight: 700 !important;
+	font-style: italic;
+}
+
+#future_events .card h2 a { transition: all .3s ease-in-out; }
+#future_events .card.ownEvent h2 a { color: #000; }
+#future_events .card.spnsrEvent h2 a { color: #FACD00; }
+
+#future_events .card.ownEvent h2 a:hover { color: #fff; }
+#future_events .card.spnsrEvent h2 a:hover { color: #000; }
+
+#future_events .card.ownEvent p,
+#future_events .card.ownEvent li,
+#future_events .card.ownEvent .btn-block { color: #fff !important; }
+#future_events .card.ownEvent .btn:hover { background-color: transparent !important; }
+
+#future_events .ms-thumbnail-caption { background-color: rgba(110,183,225,.45); }
+
+#future_events .card figcaption a {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 600;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+#future_events .card figcaption a:hover { 
+	transform: translateX(15px); 
+	background: transparent !important; 
+}
+
+#future_events .card .col-lg-6 .btn-primary { font-size: 14px; }
+
+/*---------------
+	Past Evts
+----------------*/
+
+#past_events h3 {
+	color: #093243;
+	font-weight: 700;
+	font-style: italic;
+}
+
+#past_events .pageSlides .card { box-shadow: none; }
+#past_events .pageSlides .card-body { border: .3px solid #093243; }
+
+#past_events > .card {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 3rem 0 9.5rem;
+	width: 100%;
+}
+
+#past_events .card.ownEvent .card-body { 
+	background-image: url('../img/bg_mede_card.jpg') !important;
+	background-size: cover;
+}
+
+#past_events .card h4 {
+	font-size: 2rem !important;
+	line-height: 2.1rem;
+	font-weight: 700 !important;
+	font-style: italic;
+}
+
+#past_events .card p {
+	font-size: 15px !important;
+	line-height: 17px !important;
+}
+
+#past_events .card figcaption a {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+#past_events .card figcaption a:hover { 
+	transform: translateX(15px);
+	background: transparent !important; 
+}
+
+#past_events #pastEvt_pageNav { 
+	padding: 0 3rem; 
+	margin: 0;
+	margin-bottom: 3rem;
+}
+
+.pastSlides { display: block !important; }
+.pastSlides.hidden { display: none !important; }
+
+#past_events #pastEvt_pageNav li { list-style: none; }
+#pastEvt_pageNav i { 
+	font-size: 25px; 
+	transition: all .3s ease-in-out;
+}
+
+#pastEvt_pageNav button {
+	border: none;
+	color: #03A9F4;
+	background-color: transparent;
+}
+
+#pastEvt_pageNav #paginatePrev:hover i { transform: translateX(-11px); }
+#pastEvt_pageNav #paginateNext:hover i { transform: translateX(11px); }
+
+@media (min-width:576px) {
+    #past_events { max-width: 540px }
+}
+
+@media (min-width:768px) {
+    #past_events { max-width: 720px }
+}
+
+@media (min-width:992px) {
+    #past_events { max-width: 960px }
+}
+
+@media (min-width:1200px) {
+    #past_events { max-width: 1140px }
+}
+
+/*--------------- Individual Page -----------------*/
+
+.sponsorEvent a { color: #EED567; }
+
+/*---------------
+	 Header
+---------------*/
+
+.evt_banner { 
+	background-size: cover;
+	background-position: center;
+	height: 65vh;
+}
+
+.evt_banner:after { content: none !important; }
+
+.ownEvtBanner01 { background-image: url("../img/evts/banner_monalisa.jpg") !important; }
+.spnsrEvtBanner01 { background-image: url("../img/evts/banner_derma.jpg") !important; }
+
+/*------------------
+	 Quick Info
+------------------*/
+
+.infoBanner {
+	justify-content: center;
+	margin-top: 0;
+	padding: 3rem 0;
+}
+
+.ownInfoBanner { width: 75%; }
+
+.infoBanner span {
+	border-radius: 50%;
+	background-color: #093243;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	width: 35px;
+	height: 35px;
+	color: #fff;
+}
+
+.infoBanner p {
+	font-style: italic;
+	font-weight: 300;
+	color: #fff;
+}
+
+@media(max-width: 576px) {
+	.ownInfoBanner { width: 100%; }
+}
+
+/*------------------
+	 Main Body
+------------------*/
+
+.evtMainCont { display: block !important; }
+.pastEvent .evtMainCont { display: none !important; }
+
+.mainEvtCard h3 {
+	color: #093243;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.evtSpeaker { margin: 0 0 4rem; }
+
+.evtSpeaker img { 
+	border-radius: 50%;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.evtSpeakerName {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	width: 100%;
+}
+
+.evtSpeaker h3 { 
+	font-size: 3.3rem; 
+	line-height: 3.45rem; 
+}
+
+.evtSpeaker h6 {
+	font-weight: 300;
+	font-style: italic;
+}
+
+.evtDesc {
+	font-style: italic;
+	font-weight: 300;
+}
+
+h3.croquisTtl { color: #FACD00; }
+
+.croquis {
+	text-align: center;
+	width: 100%;
+}
+
+.croquis_Evt { 
+	display: inline-block; 
+	width: 65%;
+}
+
+@media(max-width: 767px){
+	.mainEvtCard,
+	.mainEvt_Title { text-align: center; }
+
+	.croquis_Evt { width: 100%; }
+}
+
+/*---------------
+	Gallery
+---------------*/
+
+.evtGalleryCont { display: none !important; }
+.pastEvent .evtGalleryCont { display: block !important; }
+
+.evnt_gallery div { 
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.evnt_gallery img {
+	width: 100%;
+	height: 150px;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+}
+
+.evnt_gallery img:hover { 
+	transform: scale(1.1); 
+	opacity: .8;
+}
+
+@media(max-width: 767px){
+	.ms-footbar-block,
+	.ms-footbar-block * { text-align: center }
+}
