@@ -1,0 +1,67 @@
+.contact_dpmtCards .card {
+	background-color: #0A99D0;
+	color: #fff;
+	-webkit-box-shadow: 0 3px 10px 1px rgba(0,0,0,.3);
+	box-shadow: 0 3px 10px 1px rgba(0,0,0,.3);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.contact_dpmtCards:hover .card, .selectedOpt { 
+	background-color: #48B5E2 !important;
+	cursor: pointer;
+	transform: translateY(-5px);
+}
+
+.contact_dpmtCards span {
+	background-color: #fff;
+	color: #0A99D0;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.contact_dpmtCards:hover span , .selectedOpt span { color: #48B5E2 !important; }
+
+#cInfo p { font-size: 16px; }
+
+#cInfoSeller { 
+	font-size: 2rem;
+	margin-top: 20px;
+}
+
+/*-------------- Equipos --------------*/
+
+.contactEqpmnt input, .contactEqpmnt select {
+	width: 100%;
+	background-color: #fff;
+    border: 2px solid #00293B;
+    border-radius: 5px !important;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.contactEqpmnt button {
+	width: 100% !important;
+    height: 50px !important;
+    border: 0px !important;
+    font-size: 24px !important;
+    border-radius: 4px !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0 !important;
+    background-color: #0370ae !important;
+}
+
+.contactEqpmnt .checkbox label { color: #1e1e1e; }
+
+.fb_reset { display: none !important; }
