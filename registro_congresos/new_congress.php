@@ -124,7 +124,7 @@
                 $target_dirBg = "img/custom-img/bg/";
                 $bgFileName = $target_dirBg . basename($_FILES["upd_bg_image"]["name"]);
                 $bgFileType = strtolower(pathinfo($bgFileName,PATHINFO_EXTENSION));
-                $bgFileName = "bg-congreso_" . $maxInd[0] . "." . $bgFileType;
+                $bgFileName = "bg-congreso_" . $selectedId . "." . $bgFileType;
                 $target_Bg = $target_dirBg . $bgFileName;
                 $bg = $target_Bg;
 
@@ -149,7 +149,7 @@
             $target_dirLogo = "img/custom-img/logo/";
             $logoFileName = $target_dirLogo . basename($_FILES["upd_logo_congreso"]["name"]);
             $logoFileType = strtolower(pathinfo($logoFileName,PATHINFO_EXTENSION));
-            $logoFileName = "logo-congreso_" . $maxInd[0] . "." . $logoFileType;
+            $logoFileName = "logo-congreso_" . $selectedId . "." . $logoFileType;
             $target_Logo = $target_dirLogo . $logoFileName;
             $logo = $target_Logo;
 
