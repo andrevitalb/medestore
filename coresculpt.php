@@ -359,10 +359,6 @@ $equipo = "CoreSculpt";
                 <div class="row">
                   <div class="col-md-9 col-sm-12">
                     <input type="email" id="contactEmail" name="contactEmail" placeholder="Email*" required>
-                    <div style="display: none;">
-                      <input type="text" name="contactSubject" value="Lanzamiento Coresculpt">
-                      <input type="text" name="localUrl" id="localUrl" value="<?php echo strtolower(str_replace(' ', '-', $equipo)); ?>.php">
-                    </div>
                   </div>
                   <div class="col-md-3 col-sm-12">
                     <input type="hidden" name="recaptcha_response" class="recaptchaResponse">
