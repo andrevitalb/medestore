@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.container-name-event {
+	height: 300px;
+	padding-top: 70px;
+}
+.back-event {
+	background-image: url(../img/background-dermacosmetica.jpg);
+	background-size: 100% auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.custom-form input.form-control,
+.custom-form textarea.form-control {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+@media (max-width: 500px) {
+	.container-name-event {
+		padding-top: 40px;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	.ms-site-title-lg-soporte {
+		font-size: 40px;
+	}
+}
+@media (max-width: 767px) {
+	.back-event {
+		background-size: cover;
+	}
+}
