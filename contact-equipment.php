@@ -12,17 +12,17 @@ $recaptcha = file_get_contents($recaptchaUrl . '?secret=' . $recaptchaSecret . '
 $recaptcha = json_decode($recaptcha);
 
 if ($recaptcha->score >= 0.7) {
-	$section = $_POST['contactDpmnt'];
-	$subject = $_POST['contactSubject'];
+	$section = $_POST['department'];
+	$subject = $_POST['subject'];
 
-	$state = $_POST['contactState'];
-	$firstName = $_POST['contactFName'];
-	$lastName = $_POST['contactLName'];
-	$mail = $_POST['contactEmail'];
-	$phone = $_POST['contactPhone'];
-	$speciality = $_POST['contactSpecialty'];
+	$state = $_POST['state'];
+	$firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName'];
+	$mail = $_POST['email'];
+	$phone = $_POST['phone'];
+	$speciality = $_POST['speciality'];
 
-	if (isset($_POST['contactSubscribe'])) $subscribe = 1;
+	if (isset($_POST['subscribe'])) $subscribe = 1;
 	else $subscribe = 0;
 
 	$queryContact = "INSERT INTO contactos (
