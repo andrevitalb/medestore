@@ -120,12 +120,12 @@
               <div class="card-body">
                 <figure style="width: 300px; margin: 0px auto;">
                   <?php
-                    if($logo == 1) echo '<img src="'.$props[2].'" alt="" class="img-fluid">';
+                    if($logo == 1) echo '<img src="'.$props[2].'" alt="" class="img-fluid" style="width:100%; height: auto;">';
                     else echo '<h6 class="animated zoomInDown animation-delay-5" style="font-size: 30px;font-weight: 400;">'.$props[3].'</h6>'
                   ?>
                 </figure>
                 <h1 class="color-primary text-center"></h1>
-                <form class="form-horizontal custom-form" method = "post">
+                <form class="form-horizontal custom-form" method = "post" autocomplete="off">
                   <fieldset>
                     <div class="form-group row">
                       <label for="register_fname" class="col-md-3 control-label">Nombre</label>
@@ -260,10 +260,6 @@
 
         <aside class="ms-footbar section fp-auto-height">
         <div class="container">
-
-
-
-
           <div class="row">
             <div class="col-lg-4 ms-footer-col">
               <div class="ms-footbar-block">
