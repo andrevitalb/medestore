@@ -28,26 +28,20 @@
 			$userIdQuery = "Select registros_ID from registros where registros_correo = '$email'";
 			$userId = mysqli_fetch_array(mysqli_query($connect, $userIdQuery))[0];
 
-			$maxAttendantIdQuery = "Select MAX(asistentes_ID) from asistentes";
-			$newAttendantId = mysqli_fetch_array(mysqli_query($connect, $maxAttendantIdQuery))[0] + 1;
-
 			if(!$userId){
-				$userIdQuery = "Select MAX(registros_ID) from registros";
-				$userId = mysqli_fetch_array(mysqli_query($connect, $userIdQuery))[0] + 1;
-
-				$insertUserQuery = "Insert into registros (registros_ID, registros_nombre, registros_apellido, registros_correo, registros_telefono, registros_especialidad, registros_estado, registros_evento) values ($userId, '$fname', '$lname', '$mail', '$phone', '$specialty', '$state', $eventId)";
-				mysqli_query($connect, $insertUserQuery);
+				$insertUserQuery = "Insert into registros (registros_nombre, registros_apellido, registros_correo, registros_telefono, registros_especialidad, registros_estado, registros_evento) values ('$firstName', '$lastName', '$email', '$phone', '$speciality', '$state', $eventId)";
+				$userId = mysqli_fetch_array(mysqli_query($connect, $insertUserQuery))[0];
 			} else {
 				$userLastEventQuery = "Select registros_evento from registros where registros_ID = $userId";
 				$userLastEventId = mysqli_fetch_array(mysqli_query($connect, $userLastEventQuery))[0];
 
 				if($userLastEventId != $eventId){
-					$updateUserQuery = "Update registros set registros_telefono = '$phone', registros_especialidad = '$specialty', registros_estado = '$state', registros_evento = $eventId where registros_ID = $userId";
+					$updateUserQuery = "Update registros set registros_telefono = '$phone', registros_especialidad = '$speciality', registros_estado = '$state', registros_evento = $eventId where registros_ID = $userId";
 					mysqli_query($connect, $updateUserQuery);
 				} else echo '<script>swal("¡Error!", "Este usuario ya está registrado en este evento.", "error");</script>';
 			}
 
-			$insertAttendantQuery = "Insert into asistentes (asistentes_ID, asistentes_usuario, asistentes_congreso, asistentes_asesor, asistentes_producto, asistentes_comentarios) values ($newAttendantId, $userId, $eventId, '$seller', '$product', '$comments')";
+			$insertAttendantQuery = "Insert into asistentes (asistentes_usuario, asistentes_congreso, asistentes_asesor, asistentes_producto, asistentes_comentarios) values ($userId, $eventId, '$seller', '$product', '$comments')";
 			mysqli_query($connect, $insertAttendantQuery);
 
 			echo '<script>swal("¡Éxito!", "Registrado satisfactoriamente.", "success");</script>';
