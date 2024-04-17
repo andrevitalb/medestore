@@ -15,17 +15,17 @@
 		$eDate = new DateTime($endDate[0]);
 
 		if(($currDate > $sDate) && ($currDate < $eDate)){
-			$fname = $_POST['register_fname'];
-			$lname = $_POST['register_lname'];
-			$mail = $_POST['register_mail'];
-			$phone = preg_replace("/[^0-9]/", "", $_POST['register_phone']);
-			$specialty = $_POST['register_specialty'];
-			$state = $_POST['register_state'];
-			$seller = $_POST['register_seller'];
-			$product = $_POST['register_product'];
-			$comments = preg_replace("/\s+/", " ", $_POST['register_comments']);
+			$firstName = $_POST['firstName'];
+			$lastName = $_POST['lastName'];
+			$email = $_POST['email'];
+			$phone = preg_replace("/[^0-9]/", "", $_POST['phone']);
+			$speciality = $_POST['speciality'];
+			$state = $_POST['state'];
+			$seller = $_POST['seller'];
+			$product = $_POST['product'];
+			$comments = preg_replace("/\s+/", " ", $_POST['comments']);
 
-			$userIdQuery = "Select registros_ID from registros where registros_correo = '$mail'";
+			$userIdQuery = "Select registros_ID from registros where registros_correo = '$email'";
 			$userId = mysqli_fetch_array(mysqli_query($connect, $userIdQuery))[0];
 
 			$maxAttendantIdQuery = "Select MAX(asistentes_ID) from asistentes";
