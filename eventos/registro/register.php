@@ -41,8 +41,13 @@
 				} else echo '<script>swal("¡Error!", "Este usuario ya está registrado en este evento.", "error");</script>';
 			}
 
-			$insertAttendantQuery = "Insert into asistentes (asistentes_usuario, asistentes_congreso, asistentes_asesor, asistentes_producto, asistentes_comentarios) values ($userId, $eventId, '$seller', '$product', '$comments')";
-			mysqli_query($connect, $insertAttendantQuery);
+			$registeredCheckQuery = "SELECT COUNT(*) AS registros FROM asistentes WHERE asistentes_usuario = $userId AND asistentes_congreso = $eventId";
+			$registeredCheck = mysqli_fetch_array(mysqli_query($connect, $registeredCheckQuery))[0];
+
+			if($registeredCheck <= 7) {
+				$insertAttendantQuery = "INSERT INTO asistentes (asistentes_usuario, asistentes_congreso, asistentes_asesor, asistentes_producto, asistentes_comentarios) values ($userId, $eventId, '$seller', '$product', '$comments')";
+				mysqli_query($connect, $insertAttendantQuery);
+			}
 
 			echo '<script>swal("¡Éxito!", "Registrado satisfactoriamente.", "success");</script>';
 		} else echo '<script>swal("¡Error!", "Este evento ya no está disponible para registro.", "error");</script>';
