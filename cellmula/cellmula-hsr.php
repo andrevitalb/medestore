@@ -1,6 +1,4 @@
-<?php
-include($_SERVER['DOCUMENT_ROOT'] . '/sellerInfo.php');
-?>
+<?php $device = "CELLMULA HSR"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
