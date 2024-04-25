@@ -820,16 +820,12 @@ include($_SERVER['DOCUMENT_ROOT'] . '/sellerInfo.php');
 		<!-- ms-site-container -->
 		<?php include('menu_left.php'); ?>
 
-		<div id="whatsapp-chat_wrapper" style="display: none">
-			<a href="#" id="whatsAppChat" target="_blank"
-				><img src="../assets/img/whatsapp-icon.png" alt="Logo WhatsApp"
-			/></a>
-		</div>
-
-		<div class="whatsappSend" style="display: none">
-			<form action="" id="whatsappSend" method="post">
-				<input type="text" id="stateSellerWA" name="stateSellerWA" />
-				<button name="updateWA" id="updateWA" type="submit"></button>
+		<div id="whatsapp-chat_wrapper">
+			<form method="post" action="../whatsAppHandler.php">
+				<input type="hidden" name="whatsAppCounterLink" id="whatsAppCounterLink" />
+				<button type="submit" id="whatsAppChat">
+					<img src="../assets/img/whatsapp-icon.png" alt="Logo WhatsApp" />
+				</button>
 			</form>
 		</div>
 
@@ -842,47 +838,12 @@ include($_SERVER['DOCUMENT_ROOT'] . '/sellerInfo.php');
 		<script src="../assets/js/home-generic-ultracel.js"></script>
 		<script>
 			$(document).ready(function () {
-				var autoScrollMobile = true
-
-				if ($("body").width() <= 574) autoScrollMobile = false
-				else autoScrollMobile = true
-
 				$("#wrapper").fullpage({
 					licenseKey: "667CBBF7-7C3C4F33-B8D7DA3E-D363FCA1",
-					autoScrolling: autoScrollMobile,
+					autoScrolling: $("body").width() > 574,
 				})
 			})
 		</script>
-		<script>
-			var whatsAppLink, state
-
-			$("#contactState").change(function () {
-				whatsAppLink = "https://api.whatsapp.com/send?phone="
-				state = $("#contactState").children("option:selected").val()
-				if (state != "Fuera de México") {
-					switch (state) {
-						default:
-							whatsAppLink += "<?php echo $contactoConsumibles[8]; ?>"
-							break
-					}
-					whatsAppLink +=
-						"&text=Hola,%20estoy%20visitando%20su%20página%20web%20y%20me%20interesaría%20recibir%20información%20sobre%20CELLMULA"
-
-					$("#whatsAppChat").attr("href", whatsAppLink)
-					$("#whatsapp-chat_wrapper").css("display", "block")
-					$("#formSubmit").removeAttr("disabled")
-				} else {
-					alert(
-						"Por el momento, en MedeStore sólo atendemos clientes en México, contacte con un distribuidor en su país para mayor información.",
-					)
-					$("#formSubmit").attr("disabled", "true")
-					$("#whatsapp-chat_wrapper").css("display", "none")
-				}
-			})
-
-			// $('#whatsAppChat').click(function(){
-			//   if(state == 'Ciudad de México' || state == 'Estado de México') $('#whatsappSend').submit();
-			// });
-		</script>
+		<?php include("../whatsAppHandler.php"); ?>
 	</body>
 </html>
