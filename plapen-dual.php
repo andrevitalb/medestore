@@ -1098,7 +1098,7 @@
 		<div id="whatsapp-chat_wrapper">
 			<form method="post" action="whatsAppHandler.php">
 				<input type="hidden" name="whatsAppCounterLink" id="whatsAppCounterLink" />
-				<button type="submit" id="whatsAppChat" target="_blank">
+				<button type="submit" id="whatsAppChat">
 					<img src="assets/img/whatsapp-icon.png" alt="Logo WhatsApp" />
 				</button>
 			</form>

@@ -1048,10 +1048,13 @@ $device = "Olidia"; ?>
 		<!-- ms-site-container -->
 		<?php include('menu_left.php'); ?>
 
-		<div id="whatsapp-chat_wrapper" style="display: none">
-			<a href="#" id="whatsAppChat" target="_blank"
-				><img src="assets/img/whatsapp-icon.png" alt="Logo WhatsApp"
-			/></a>
+		<div id="whatsapp-chat_wrapper">
+			<form method="post" action="whatsAppHandler.php">
+				<input type="hidden" name="whatsAppCounterLink" id="whatsAppCounterLink" />
+				<button type="submit" id="whatsAppChat">
+					<img src="assets/img/whatsapp-icon.png" alt="Logo WhatsApp" />
+				</button>
+			</form>
 		</div>
 
 		<script src="assets/js/plugins.min.js"></script>
