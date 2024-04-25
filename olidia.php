@@ -1,7 +1,6 @@
 <?php
 include('sellerInfo.php');
-$equipo = "Olidia";
-?>
+$device = "Olidia"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -880,14 +879,14 @@ $equipo = "Olidia";
 											type="text"
 											name="subject"
 											id="contactSubject"
-											value="Interés en <?php echo $equipo; ?>"
+											value="Interés en <?php echo $device; ?>"
 										/>
 										<input type="text" name="whatsAppLink" id="whatsAppLink" />
 										<input
 											type="text"
 											name="localUrl"
 											id="localUrl"
-											value="<?php echo strtolower(str_replace(' ', '-', $equipo));?>.php"
+											value="<?php echo strtolower(str_replace(' ', '-', $device));?>.php"
 										/>
 									</div>
 									<div class="row">
@@ -1064,80 +1063,12 @@ $equipo = "Olidia";
 		<script src="assets/js/home-generic-7.js"></script>
 		<script>
 			$(document).ready(function () {
-				var autoScrollMobile = true
-
-				if ($("body").width() <= 574) autoScrollMobile = false
-				else autoScrollMobile = true
-
 				$("#wrapper").fullpage({
 					licenseKey: "667CBBF7-7C3C4F33-B8D7DA3E-D363FCA1",
-					autoScrolling: autoScrollMobile,
+					autoScrolling: $("body").width() > 574,
 				})
 			})
 		</script>
-		<script>
-			var whatsAppLink;
-
-			$("#contactState").change(function() {
-			  whatsAppLink = "https://api.whatsapp.com/send?phone=";
-			  state = $("#contactState").children("option:selected").val();
-			  if (state != 'Fuera de México') {
-			    switch (state) {
-			      case 'Aguascalientes':
-			      case 'Baja California Sur':
-			      case 'Guanajuato':
-			      case 'Michoacán':
-			      case 'Nayarit':
-			      case 'Nuevo León':
-			      case 'Quintana Roo':
-			      case 'San Luis Potosí':
-			        whatsAppLink += "<?php echo $contactoEquipos[0]; ?>"
-			        break;
-			      case 'Baja California':
-			      case 'Coahuila':
-			      case 'Jalisco':
-			      case 'Sinaloa':
-			      case 'Zacatecas':
-			        whatsAppLink += "<?php echo $contactoEquipos[1]; ?>"
-			        break;
-			      case 'Campeche':
-			      case 'Chihuahua':
-			      case 'Colima':
-			      case 'Durango':
-			      case 'Sonora':
-			      case 'Tamaulipas':
-			      case 'Tlaxcala':
-			        whatsAppLink += "<?php echo $contactoEquipos[2]; ?>"
-			        break;
-			      case 'Chiapas':
-			      case 'Ciudad de México':
-			      case 'Guerrero':
-			      case 'Hidalgo':
-			      case 'Estado de México':
-			      case 'Morelos':
-			      case 'Oaxaca':
-			      case 'Puebla':
-			      case 'Querétaro':
-			      case 'Tabasco':
-			      case 'Veracruz':
-			      case 'Yucatán':
-			        whatsAppLink += "<?php echo $contactoEquipos[3]; ?>"
-			        break;
-			    }
-			    whatsAppLink += "&text=Hola,%20estoy%20visitando%20su%20página%20web%20y%20me%20interesaría%20recibir%20información%20sobre%20el%20equipo%20";
-			    <?php $equipo = str_replace(' ', '%20', $equipo); ?>
-			    whatsAppLink += "<?php echo $equipo; ?>";
-
-			    $('#whatsAppLink').val(whatsAppLink)
-			    $('#whatsAppChat').attr('href', whatsAppLink);
-			    $('#whatsapp-chat_wrapper').css('display', 'block');
-			    $('#formSubmit').removeAttr('disabled');
-			  } else {
-			    alert("Por el momento, en MedeStore sólo atendemos clientes en México, contacte con un distribuidor en su país para mayor información.");
-			    $('#formSubmit').attr('disabled', 'true');
-			    $('#whatsapp-chat_wrapper').css('display', 'none');
-			  }
-			});
-		</script>
+		<?php include("whatsAppHandler.php"); ?>
 	</body>
 </html>

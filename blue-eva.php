@@ -1,8 +1,4 @@
-<?php
-include('sellerInfo.php');
-include('whatsapp-counter.php');
-$equipo = "Blue Eva";
-?>
+<?php $device = "Blue Eva"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -579,24 +575,19 @@ $equipo = "Blue Eva";
 									class="container-fluid contactEqpmnt"
 								>
 									<div class="row" style="display: none">
-										<input
-											type="text"
-											name="department"
-											id="contactDpmnt"
-											value="Ventas Equipos"
-										/>
+										<input type="text" name="department" id="contactDpmnt" value="Ventas Equipos" />
 										<input
 											type="text"
 											name="subject"
 											id="contactSubject"
-											value="Interés en <?php echo $equipo; ?>"
+											value="Interés en <?php echo $device; ?>"
 										/>
 										<input type="text" name="whatsAppLink" id="whatsAppLink" />
 										<input
 											type="text"
 											name="localUrl"
 											id="localUrl"
-											value="<?php echo strtolower(str_replace(' ', '-', $equipo));?>.php"
+											value="<?php echo strtolower(str_replace(' ', '-', $device));?>.php"
 										/>
 									</div>
 									<div class="row">
@@ -760,8 +751,8 @@ $equipo = "Blue Eva";
 		<!-- ms-site-container -->
 		<?php include('menu_left.php'); ?>
 
-		<div id="whatsapp-chat_wrapper" style="display: none">
-			<form method="post" action="whatsapp-counter.php">
+		<div id="whatsapp-chat_wrapper">
+			<form method="post" action="whatsAppHandler.php">
 				<input type="hidden" name="whatsAppCounterLink" id="whatsAppCounterLink" />
 				<button type="submit" id="whatsAppChat" target="_blank">
 					<img src="assets/img/whatsapp-icon.png" alt="Logo WhatsApp" />
@@ -778,54 +769,12 @@ $equipo = "Blue Eva";
 		<script src="assets/js/home-generic-7.js"></script>
 		<script>
 			$(document).ready(function () {
-				var autoScrollMobile = true
-
-				if ($("body").width() <= 574) autoScrollMobile = false
-				else autoScrollMobile = true
-
 				$("#wrapper").fullpage({
 					licenseKey: "667CBBF7-7C3C4F33-B8D7DA3E-D363FCA1",
-					autoScrolling: autoScrollMobile,
+					autoScrolling: $("body").width() > 574,
 				})
 			})
 		</script>
-		<script>
-			$("#contactState").change(function() {
-			  const state = $("#contactState").children("option:selected").val();
-			  if (state != 'Fuera de México') {
-			    let phoneNumber
-			    if (state == 'Ciudad de México' || state == 'Estado de México') {
-			      phoneNumber = "<?php echo $contactoEquipos["cdmx"]; ?>"
-			    } else {
-			      switch (<?php echo $whatsAppCounter[0] ?> % 4) {
-			        case 0:
-			          phoneNumber = "<?php echo $contactoEquipos[0]; ?>"
-			          break;
-			        case 1:
-			          phoneNumber = "<?php echo $contactoEquipos[1]; ?>"
-			          break;
-			        case 2:
-			          phoneNumber = "<?php echo $contactoEquipos[2]; ?>"
-			          break;
-			        case 3:
-			          phoneNumber = "<?php echo $contactoEquipos[3]; ?>"
-			          break;
-			      }
-			    }
-
-			    const equipo = "<?php echo str_replace(' ', '%20', $equipo); ?>"
-			    const whatsAppLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hola,%20estoy%20visitando%20su%20página%20web%20y%20me%20interesaría%20recibir%20información%20sobre%20el%20equipo%20${equipo}`
-
-			    $('#whatsAppLink').val(whatsAppLink)
-			    $('#whatsAppCounterLink').val(whatsAppLink)
-			    $('#whatsapp-chat_wrapper').css('display', 'block');
-			    $('#formSubmit').removeAttr('disabled');
-			  } else {
-			    alert("Por el momento, en MedeStore sólo atendemos clientes en México, contacte con un distribuidor en su país para mayor información.");
-			    $('#formSubmit').attr('disabled', 'true');
-			    $('#whatsapp-chat_wrapper').css('display', 'none');
-			  }
-			});
-		</script>
+		<?php include("whatsAppHandler.php"); ?>
 	</body>
 </html>
