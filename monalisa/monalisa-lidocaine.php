@@ -1,3 +1,4 @@
+<?php $device = "MONALISA Lidocaine"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>

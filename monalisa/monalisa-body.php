@@ -1,3 +1,4 @@
+<?php $device = "MONALISA Body"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>

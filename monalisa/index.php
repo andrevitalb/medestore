@@ -1,6 +1,4 @@
-<?php
-include($_SERVER['DOCUMENT_ROOT'] . '/sellerInfo.php');
-?>
+<?php $device = "MONALISA"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
