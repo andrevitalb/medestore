@@ -25,19 +25,19 @@
 	}
 ?>
 <script>
-	const whatsAppList = {
-		0: "<?php echo $whatsAppList[0]; ?>",
-		1: "<?php echo $whatsAppList[1]; ?>",
-		2: "<?php echo $whatsAppList[2]; ?>",
-	}
+const whatsAppList = {
+	0: "<?php echo $whatsAppList[0]; ?>",
+	1: "<?php echo $whatsAppList[1]; ?>",
+	2: "<?php echo $whatsAppList[2]; ?>",
+}
 
-	$(document).ready(() => {
-		const device = "<?php echo str_replace(' ', '%20', $device); ?>"
-		const phoneNumber = whatsAppList[<?php echo $whatsAppCounter ?> % 3]
-		const whatsAppLink =
-			`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hola,%20estoy%20visitando%20su%20página%20web%20y%20me%20interesaría%20recibir%20información%20sobre%20el%20equipo%20${device}`
-		
-		$("#whatsAppLink").val(whatsAppLink)
-		$("#whatsAppCounterLink").val(whatsAppLink)
-	})
+$(document).ready(() => {
+	const device = "<?php echo str_replace(' ', '%20', $device); ?>"
+	const phoneNumber = whatsAppList[<?php echo $whatsAppCounter ?> % 3]
+	const whatsAppLink =
+		`https://api.whatsapp.com/send?phone=${phoneNumber}&text=Hola,%20estoy%20visitando%20su%20página%20web%20y%20me%20interesaría%20recibir%20información%20sobre%20el%20equipo%20${device}`
+
+	$("#whatsAppLink").val(whatsAppLink)
+	$("#whatsAppCounterLink").val(whatsAppLink)
+})
 </script>
