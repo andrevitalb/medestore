@@ -1,29 +1,29 @@
-<meta http-equiv="refresh" content="3.5;URL=contacto.php"/>
+<meta http-equiv="refresh" content="3.5;URL=contacto.php" />
 <?php
-	$error_code = '';
+	$errorCode = '';
 
-	$distName = $_REQUEST['nameSellerWA'];
-	$dist = $_REQUEST['emailSellerWA'];
+$distName = $_REQUEST['nameSellerWA'];
+$dist = $_REQUEST['emailSellerWA'];
 
-	if (strpos($dist, '@medestore.mx')) {
-		$hostname = "localhost";
-		$username = "intracel_mluser";
-		$password = "y3ll0wp4thyellow";
-		$databaseName = "intracel_controlContacto";
+if (strpos($dist, '@medestore.mx')) {
+	$hostname = "localhost";
+	$username = "intracel_mluser";
+	$password = "y3ll0wp4thyellow";
+	$databaseName = "intracel_controlContacto";
 
-		$connect = mysqli_connect($hostname, $username, $password, $databaseName);
-		mysqli_set_charset ($connect, "utf8");
-		date_default_timezone_set('America/Mexico_City');
+	$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+	mysqli_set_charset($connect, "utf8");
+	date_default_timezone_set('America/Mexico_City');
 
-		$para = $dist;
+	$para = $dist;
 
-		$title = "Contacto WhatsApp " . $distName;
+	$title = "Contacto WhatsApp " . $distName;
 
-		$headers = "MIME-Version: 1.0" . "\r\n";
-		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-		$headers .= 'From: noreply@medestore.mx'."\r\n";
+	$headers = "MIME-Version: 1.0" . "\r\n";
+	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	$headers .= 'From: noreply@medestore.mx'."\r\n";
 
-		$message = "
+	$message = "
 		<html>
 		<head>
 		<title>$title</title>
@@ -53,11 +53,11 @@
 		</table>
 		</body>
 		</html>
-		";
+	";
 
-		mail($para, $title, $message, $headers);
+	mail($para, $title, $message, $headers);
 
-		$message = "
+	$message = "
 		<html>
 		<head>
 		<title>$title</title>
@@ -87,13 +87,20 @@
 		</table>
 		</body>
 		</html>
-		";
+	";
 
-		$para = "contacto@medestore.mx";
+	$para = "contacto@medestore.mx";
 
-		if (!mail($para, $subject, $message, $headers)) $error_code = 'EC-1001';
-	} else $error_code = 'EC-1002';
+	if (!mail($para, $subject, $message, $headers)) {
+		$errorCode = 'EC-1001';
+	}
+} else {
+	$errorCode = 'EC-1002';
+}
 
-	if($error_code == '') echo '<body><link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"><div><div><img src="https://www.medestore.mx/assets/img/logo_medestore-color.png" alt="Logo Medestore"></div><h1>Mensaje Enviado</h1><h4>Gracias por ponerte en contacto con nosotros.<br> En breve uno de nuestros especialistas te contactará</h4></div><style>body{margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}img{width: 25rem;display: inline-block;margin: 0 0 5rem;}h1{font-family: Raleway, sans-serif;font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4{font-size: 32px;font-family: Raleway, sans-serif;font-weight: 400;margin: 0;}</style></body>';
-	else echo "<body><link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'><div><div><img src='https://www.medestore.mx/assets/img/logo_medestore-color.png' alt='Logo Medestore'></div><h1>Ocurrió un problema</h1><h4>Por favor, vuelve a intentar mandar tu mensaje. $error_code</h4></div><style>body{margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}img{width: 25rem;display: inline-block;margin: 0 0 5rem;}h1{font-family: Raleway, sans-serif;font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4{font-size: 32px;font-family: Raleway, sans-serif;font-weight: 400;margin: 0;}</style></body>";
+if($errorCode == '') {
+	echo '<body><link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"><div><div><img src="https://www.medestore.mx/assets/img/logo_medestore-color.png" alt="Logo Medestore"></div><h1>Mensaje Enviado</h1><h4>Gracias por ponerte en contacto con nosotros.<br> En breve uno de nuestros especialistas te contactará</h4></div><style>body{margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}img{width: 25rem;display: inline-block;margin: 0 0 5rem;}h1{font-family: Raleway, sans-serif;font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4{font-size: 32px;font-family: Raleway, sans-serif;font-weight: 400;margin: 0;}</style></body>';
+} else {
+	echo "<body><link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'><div><div><img src='https://www.medestore.mx/assets/img/logo_medestore-color.png' alt='Logo Medestore'></div><h1>Ocurrió un problema</h1><h4>Por favor, vuelve a intentar mandar tu mensaje. $errorCode</h4></div><style>body{margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}img{width: 25rem;display: inline-block;margin: 0 0 5rem;}h1{font-family: Raleway, sans-serif;font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4{font-size: 32px;font-family: Raleway, sans-serif;font-weight: 400;margin: 0;}</style></body>";
+}
 ?>
