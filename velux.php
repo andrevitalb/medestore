@@ -1,4 +1,4 @@
-<?php $device = "CoreSculpt"; ?>
+<?php $device = "VeLux"; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -11,34 +11,32 @@
 		/>
 		<meta name="theme-color" content="#333" />
 		<!-- METAS FACEBOOK -->
-		<meta content="CoreSculpt" property="og:title" />
+		<meta content="Velux" property="og:title" />
 		<meta
-			content="https://www.medestore.mx/assets/img/facebook-thumbnails/coresculpt-facebook.png"
+			content="https://www.medestore.mx/assets/img/facebook-thumbnails/velux-facebook.png"
 			property="og:image"
 		/>
-		<meta
-			content="Es un equipo que ayuda a mantener un cuerpo sano, al esculpir los músculos de manera estética."
-		/>
+		<meta content="El nuevo equipo con tecnología de láser diodo con doble longitud de onda." />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://www.medestore.mx/coresculpt.php" />
+		<meta property="og:url" content="https://www.medestore.mx/velux.php" />
 		<meta property="og:image:type" content="image/png" />
 		<!-- METAS TWITTER -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@medestoremx" />
 		<meta name="twitter:creator" content="@medestoremx" />
-		<meta name="twitter:title" content="CoreSculpt" />
+		<meta name="twitter:title" content="VeLux" />
 		<meta
 			name="twitter:description"
-			content="Es un equipo que ayuda a mantener un cuerpo sano, al esculpir los músculos de manera estética."
+			content="El nuevo equipo con tecnología de láser diodo con doble longitud de onda."
 		/>
 		<meta
 			name="twitter:image"
-			content="https://www.medestore.mx/assets/img/facebook-thumbnails/coresulpt-facebook.png"
+			content="https://www.medestore.mx/assets/img/facebook-thumbnails/velux-facebook.png"
 		/>
-		<title>Medestore | CoreSculpt</title>
+		<title>Medestore | VeLux</title>
 		<meta
 			name="description"
-			content="Es un equipo que ayuda a mantener un cuerpo sano, al esculpir los músculos de manera estética."
+			content="El nuevo equipo con tecnología de láser diodo con doble longitud de onda."
 		/>
 
 		<!-- Favicons -->
@@ -69,6 +67,7 @@
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+
 		<!-- Google Tag Manager -->
 		<script>
 			;(function (w, d, s, l, i) {
@@ -95,7 +94,6 @@
 			gtag("js", new Date())
 
 			gtag("config", "UA-33467298-1")
-			gtag("config", "G-HSMZ3WLJ1C")
 		</script>
 		<script>
 			!(function (f, b, e, v, n, t, s) {
@@ -143,35 +141,9 @@
 						action: "submit",
 					})
 					.then(function (token) {
-						;[...document.querySelectorAll(".recaptchaResponse")].forEach(
-							(input) => (input.value = token),
-						)
+						var recaptchaResponse = document.getElementById("recaptchaResponse")
+						recaptchaResponse.value = token
 					})
-			})
-		</script>
-		<!-- Global site tag (gtag.js) - Google Ads: 10868482655 -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10868482655"></script>
-		<script>
-			window.dataLayer = window.dataLayer || []
-			function gtag() {
-				dataLayer.push(arguments)
-			}
-			gtag("js", new Date())
-
-			gtag("config", "AW-10868482655")
-		</script>
-		<script>
-			gtag("event", "page_view", {
-				send_to: "AW-10868482655",
-				user_id: "replace with value",
-				value: "replace with value",
-				items: [
-					{
-						id: "replace with value",
-						location_id: "replace with value",
-						google_business_vertical: "custom",
-					},
-				],
 			})
 		</script>
 	</head>
@@ -200,9 +172,7 @@
 			<?php include('menu_superior.php'); ?>
 
 			<div id="wrapper">
-				<div
-					class="ms-hero-page ms-hero-img-room color-white intro-hero-full coresculpt-bg section"
-				>
+				<div class="ms-hero-page ms-hero-img-room color-white intro-hero-full velux-bg section">
 					<div class="intro-hero-full-content">
 						<div class="container text-center">
 							<div class="row">
@@ -211,8 +181,8 @@
 										<span class="center-block mb-2 mt-2 animated zoomInDown animation-delay-7">
 											<figure class="logo-product">
 												<img
-													src="assets/img/products/coresculpt/CoreSculpt-logo-white.png"
-													alt="Logotipo de CoreSculpt"
+													src="assets/img/products/velux/logo-velux-white.png"
+													alt="Logotipo de Velux"
 													class="img-fluid"
 												/>
 											</figure>
@@ -221,7 +191,10 @@
 											id="LIPO1060-title"
 											class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-7"
 										>
-											Sistema <strong>Electromagnético</strong> de <strong>Alta Intensidad</strong>
+											<strong class="color-primary-velux">Láser Diodo</strong> con <br /><strong
+												class="color-secondary-velux"
+												>Doble Longitud de Onda</strong
+											>
 										</h2>
 
 										<!-- <h1 class="animated fadeInUp animation-delay-12">ULTRA
@@ -233,8 +206,8 @@
 									<div class="center-block mt-2 animated zoomInDown animation-delay-8">
 										<figure class="stage-product">
 											<img
-												src="assets/img/products/coresculpt/CoreSculpt-stage.png"
-												alt="Equipo CoreSculpt"
+												src="assets/img/products/velux/velux-stage.png"
+												alt="Equipo VeLux"
 												class="img-fluid"
 											/>
 										</figure>
@@ -250,15 +223,15 @@
 					<!--<h2 class="text-center color-primary-dark mb-2 wow fadeInDown animation-delay-4">MedeStore</h2>-->
 					<div class="row">
 						<div class="col-md-12">
-							<h2 class="text-center color-primary-coresculpt mb-2">CoreSculpt</h2>
-							<h4 class="text-center color-sub-lipo1060 mb-2 fadeInDown animation-delay-5">
-								Es un equipo que ayuda a mantener un cuerpo sano, al esculpir los músculos de manera
-								estética.
-							</h4>
-							<h4 class="text-center color-sub-lipo1060 mb-2 fadeInDown animation-delay-5">
-								Sus dos piezas de mano realizan un tratamiento efectivo de abdomen, hombro, muslos,
-								glúteo y más.
-							</h4>
+							<h2 class="text-center color-primary-velux mb-2">VeLux</h2>
+							<!-- <h4 class="text-center color-sub-lipo1060 mb-2 fadeInDown animation-delay-5">Alta fluidez en pulsos de corta duración hasta 3ms</h4> -->
+							<p class="text-center color-text-lipo1060 destacado">
+								<strong>VeLux</strong> crea la solución para una óptima depilación permanente al
+								combinar dos efectivas longitudes de onda láser de 755nm & 808nm basado en la
+								tecnología de escaneo en movimiento. Las dos longitudes de onda láser trabajan de
+								manera simultánea y su energía concentrada remueve el vello no deseado escaneando a
+								través de un rayo láser directo al folículo piloso con un dolor mínimo.
+							</p>
 						</div>
 					</div>
 					<div class="row">
@@ -266,8 +239,8 @@
 							<div class="center-block mt-2 animated zoomInDown text-center animation-delay-9">
 								<figure>
 									<img
-										src="assets/img/products/coresculpt/highlights-CoreSculpt.png"
-										alt="Tratamientos con CoreSculpt"
+										src="assets/img/products/velux/handpiece-velux.png"
+										alt="Pieza de mano de VeLux"
 										class="img-fluid"
 									/>
 								</figure>
@@ -275,85 +248,54 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-8 offset-md-2 col-sm-12">
-							<div
-								id="coresculpt-form-special"
-								class="card card-info animated zoomInDown animation-delay-10"
-							>
-								<div class="card-header">
-									<h2 class="card-title text-center">Quiero más información</h2>
-								</div>
-								<div class="card-body">
-									<form
-										method="post"
-										action="contact-info.php"
-										class="container-fluid contactEqpmnt special-coresculpt"
-									>
-										<div class="row">
-											<div class="col-md-9 col-sm-12">
-												<input
-													type="email"
-													id="contactEmail"
-													name="email"
-													placeholder="Email*"
-													required
-												/>
-											</div>
-											<div class="col-md-3 col-sm-12">
-												<input type="hidden" name="recaptcha_response" class="recaptchaResponse" />
-												<button
-													type="submit"
-													class="btn btn-raised btn-primary btn-lg"
-													id="formSubmit"
-												>
-													Enviar
-												</button>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
+						<div class="col-md-12">
+							<p class="text-center color-text-lipo1060 destacado">
+								Además, la tecnología de escaneo en movimiento con un amplio y ajustable tamaño de
+								spot de 50x15mm permite un tratamiento del vello seguro, de alta velocidad y
+								comodidad sin el uso de anestésicos o gel tanto para superficies grandes y pequeñas.
+							</p>
 						</div>
 					</div>
 				</div>
+
 				<!--.section-->
 
-				<section
-					id="porque-coresculpt"
-					class="section ms-hero-img-room color-white intro-hero-full"
-				>
+				<section id="porque-velux" class="section ms-hero-img-room color-white intro-hero-full">
 					<div class="container">
 						<div class="row">
 							<div id="full-ultracel" class="col-md-4 text-center">
 								<figure class="">
 									<img
-										src="assets/img/products/coresculpt/Coresculpt-full.png"
-										alt="Equipo CoreSculpt"
+										src="assets/img/products/velux/velux-equipo-full.png"
+										alt="Equipo Velux"
 										class="img-fluid"
 									/>
 								</figure>
 							</div>
 							<div class="col-md-8 father-div">
 								<div class="son-div">
-									<h3 class="color-dark mb-2 fadeInDown animation-delay-5">
-										¿Por qué <strong class="color-primary-coresculpt">CoreSculpt</strong>?
+									<h3 class="text-dark mb-2 fadeInDown animation-delay-5">
+										¿Por qué <span class="color-primary-velux">Velux?</span>
 									</h3>
-									<h6 class="color-dark">1. Refuerzo Muscular</h6>
-									<p class="color-dark">
-										El campo electromagnético es efectivo para la prevención de hernia de disco,
-										corrección de postura, alivia el dolor de espalda y más.
+									<h6 class="color-secondary-velux">1. Tecnología de escaneo en movimiento</h6>
+									<p class="text-dark">
+										Esta tecnología permite una depilación rápida y efectiva en una área grande sin
+										riesgo a efectos secundarios.
 									</p>
-									<h6 class="color-dark">2. Alivio del Dolor</h6>
-									<p class="color-dark">
-										Energía Electromagnética con 3 tesla de alta intensidad contraen y relajan los
-										músculos de manera repetitiva. <br />Contrae: fibras intrafusales, fibras
-										sensoriales y fibras extrafusales.
+									<h6 class="color-secondary-velux">2. Tamaño de punto variable</h6>
+									<p class="text-dark">
+										El tamaño es ajustable de 50 a 10mm, lo que permite una depilación segura y
+										efectiva tanto en el rostro como cualquier parte del cuerpo.
 									</p>
-									<h6 class="color-dark">3. Efecto de Ejercicio Máximo Efectivo</h6>
-									<p class="color-dark">
-										Energía electromagnética de alta intensidad contrae y relaja los músculos mínimo
-										20,000 a un máximo de 36,000 veces en una sesión de 30 minutos. Esta simulación
-										del músculo tiene el mismo efecto que hacer sentadillas o abdominales.
+									<h6 class="color-secondary-velux">3. Enfriamiento por contacto y por aire</h6>
+									<p class="text-dark">
+										Permite una depilación cómoda hasta en pieles, sin la necesidad de usar
+										anestésicos o geles.
+									</p>
+									<h6 class="color-secondary-velux">4. Operación segura, no invasiva.</h6>
+									<p class="text-dark">
+										Gracias a la combinación de sus tecnologías permite tratamientos cómodos,
+										seguros y rápidos.
 									</p>
 								</div>
 							</div>
@@ -367,22 +309,26 @@
 							<div id="aplicaciones" class="col-md-6">
 								<div id="aplica-facial-info">
 									<h3
-										class="text-center color-primary-coresculpt text-light mb-2 fadeInDown animation-delay-5"
+										class="text-center color-secondary-velux text-light mb-2 fadeInDown animation-delay-5"
 									>
-										APLICACIÓN CORPORAL
+										DEPILACIÓN FACIAL Y CORPORAL
 									</h3>
 									<ul class="facial-list">
-										<li>Reafirma y esculpe abdomen. hombros, muslos, glúteos y otras áreas.</li>
-										<li>No genera calor ni congela, por lo que no causa dolor ni daña la piel.</li>
-										<li>No requiere tiempo de inactividad.</li>
+										<li>Elimina cualquier tipo de vello.</li>
+										<li>Seguro y con menos sesiones que otros tratamientos.</li>
+										<li>
+											Gran eficacia en superficies pequeñas del rostro o superficies grandes del
+											cuerpo.
+										</li>
+										<li>Tratamientos más rápidos y eficaces.</li>
 									</ul>
 								</div>
 							</div>
 							<div id="aplicacion-facial" class="col-md-6">
 								<figure>
 									<img
-										src="assets/img/products/coresculpt/aplicacion-corporal-coresculpt.png"
-										alt="Resultados de la aplicación corporal de CoreSculpt"
+										src="assets/img/products/velux/aplicacion-corporal-velux.png"
+										alt="Resultados de la aplicación corporal de VeLux"
 										class="img-fluid"
 									/>
 								</figure>
@@ -391,274 +337,199 @@
 					</div>
 				</section>
 
-				<section
-					id="funcionamiento-coresculpt"
-					class="section ms-hero-img-room color-white intro-hero-full"
-				>
+				<section id="" class="section ms-hero-img-room color-white intro-hero-full bg-velux-one">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<h3 class="text-center text-white text-light mb-2 fadeInDown animation-delay-5">
-									Los pacientes sienten sólo
-									<strong class="color-secondary-coresculpt"
-										>Profundas contracciones Musculares,</strong
-									>
-									¡como al hacer el ejercicio más intenso!
+								<h2
+									class="text-center color-sub-lipo1060 text-light mb-2 fadeInDown animation-delay-5"
+								>
+									Tecnología de escaneo en movimiento
+								</h2>
+								<h3
+									class="text-center color-secondary-velux text-light mb-2 fadeInDown animation-delay-5"
+								>
+									Alta fluidez en pulsos de corta duración hasta 3ms
 								</h3>
-								<p class="text-center text-white destacado">
-									El Campo Magnético de pulso sólido es instantáneamente transmitido hacia un
-									conducto que es fácilmente transmitido por un campo magnético así como al cuerpo
-									humano, resultando en corrientes inducidas. Estas inducidas biocorrientes afectan
-									cada tejido del cuerpo humano con mecanismos electrofisiológicos y estos efectos
-									electrofisiológicos aparecen en los nervios sensoriales, vasos sanguíneos, tejido
-									óseo, etc.
-								</p>
-								<p class="text-center text-white destacado">
-									El campo magnético además de ser inofensivo, también trabaja de manera profunda
-									activando células, nervios y tejido muscular, creando resultados extraordinarios.
+								<p class="text-center color-text-lipo1060 destacado">
+									La tecnología de escaneo en movimiento es un método revolucionario para el
+									tratamiento de depilación rápida del vello escaneando eficazmente un área grande
+									de 50 por 15 mm en aproximadamente 0,5-1,5 segundos. Además, ofrece una alta
+									densidad de potencia de 2.400 vatios/cm2 y permite suministrar una alta fluencia
+									con una duración de pulso corta de hasta 3 ms para el vello fino y brillante sin
+									riesgo de efectos secundarios.
 								</p>
 							</div>
 						</div>
 						<div class="row mt-3">
-							<div class="col-md-10 offset-md-1 col-12">
-								<h5 class="text-center color-secondary-coresculpt">Tratamiento CoreSculpt</h5>
-								<h5 class="text-center text-white">36,000 contracciones durante 30 min.</h5>
+							<div class="col-md-6 col-12">
 								<figure class="text-center tecno-vacuum">
 									<img
-										src="assets/img/products/coresculpt/contracciones-coresculpt.png"
-										alt="36,000 contracciones durante 30 min."
+										src="assets/img/products/velux/target-velux.jpg"
+										alt="Tecnología de VeLux"
 										class="img-fluid"
 									/>
 								</figure>
 							</div>
-						</div>
-						<div class="row mt-2">
-							<div class="col-md-8 offset-md-2 col-sm-12">
-								<div id="coresculpt-form-special" class="card card-info">
-									<div class="card-header">
-										<h2 class="card-title text-center">Quiero más información</h2>
-									</div>
-									<div class="card-body">
-										<form
-											method="post"
-											action="contact-info.php"
-											class="container-fluid contactEqpmnt special-coresculpt"
-										>
-											<div class="row">
-												<div class="col-md-9 col-sm-12">
-													<input
-														type="email"
-														id="contactEmail"
-														name="email"
-														placeholder="Email*"
-														required
-													/>
-													<div style="display: none">
-														<input type="text" name="subject" value="Lanzamiento Coresculpt" />
-														<input
-															type="text"
-															name="localUrl"
-															id="localUrl"
-															value="<?php echo strtolower(str_replace(' ', '-', $device)); ?>.php"
-														/>
-													</div>
-												</div>
-												<div class="col-md-3 col-sm-12">
-													<input
-														type="hidden"
-														name="recaptcha_response"
-														class="recaptchaResponse"
-													/>
-													<button
-														type="submit"
-														class="btn btn-raised btn-primary btn-lg"
-														id="formSubmit"
-													>
-														Enviar
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- <div class="row">
-            <div class="col-md-8 offset-md-2 text-center mt-3">
-                        <figure id="ventajas-lipo">
-                  <img src="assets/img/products/lipo1060/ventajas-lipo1060.png" alt="..." class="img-fluid">
-                        </figure> 
-            </div>
-          
-        </div>   -->
-					</div>
-				</section>
-
-				<section id="" class="section bg-coresculpt-two">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h3 class="text-center color-primary-coresculpt text-light mb-2 fadeInDown animation-delay-5">Punto 1</h3> -->
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<figure class="">
+							<div class="col-md-6 col-12">
+								<figure class="text-center tecno-vacuum">
 									<img
-										src="assets/img/products/coresculpt/enfriamiento-coresculpt.jpg"
-										alt="Enfriamiento CoreSculpt"
+										src="assets/img/products/velux/lines-velux.jpg"
+										alt="Depilación con VeLux"
 										class="img-fluid"
 									/>
 								</figure>
-							</div>
-							<div class="col-md-6">
-								<h5 class="text-center color-primary-coresculpt">Enfriamiento con agua</h5>
-								<p class="color-text-lipo1060">
-									La potente circulación del agua calma el calor de la bobina para tener un
-									tratamiento satisfactorio sin tiempo de inactividad.<br />No hay ningún peligro de
-									fuga de aceite y agua.
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<!-- <h3 class="text-center color-primary-coresculpt text-light mb-2 fadeInDown animation-delay-5">Punto 2</h3> -->
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<figure class="text-center">
-									<img
-										src="assets/img/products/coresculpt/punto02.png"
-										alt="Punto 2 CoreSculpt"
-										class="img-fluid"
-									/>
-								</figure>
-							</div>
-						</div>
-						<div class="row mt-2">
-							<div class="col-md-8 offset-md-2 col-sm-12">
-								<div id="coresculpt-form-special" class="card card-info">
-									<div class="card-header">
-										<h2 class="card-title text-center">Quiero más información</h2>
-									</div>
-									<div class="card-body">
-										<form
-											method="post"
-											action="contact-info.php"
-											class="container-fluid contactEqpmnt special-coresculpt"
-										>
-											<div class="row">
-												<div class="col-md-9 col-sm-12">
-													<input
-														type="email"
-														id="contactEmail"
-														name="email"
-														placeholder="Email*"
-														required
-													/>
-													<div style="display: none">
-														<input type="text" name="subject" value="Lanzamiento Coresculpt" />
-														<input
-															type="text"
-															name="localUrl"
-															id="localUrl"
-															value="<?php echo strtolower(str_replace(' ', '-', $device)); ?>.php"
-														/>
-													</div>
-												</div>
-												<div class="col-md-3 col-sm-12">
-													<input
-														type="hidden"
-														name="recaptcha_response"
-														class="recaptchaResponse"
-													/>
-													<button
-														type="submit"
-														class="btn btn-raised btn-primary btn-lg"
-														id="formSubmit"
-													>
-														Enviar
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section id="" class="section bg-coresculpt-one">
-					<div class="container">
+				<section id="" class="section bg-velux-two">
+					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-12">
-								<h3 class="text-center color-white mb-4">
-									Proceso de tratamiento con <strong>CoreSculpt</strong>
-								</h3>
+								<h3 class="text-center color-white mb-4">¿Cómo trabaja <strong>VeLux</strong>?</h3>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<figure>
 									<img
-										src="assets/img/products/coresculpt/icon-30min.png"
-										alt="Tratamiento de 30min con CoreSculpt"
+										src="assets/img/products/velux/etapa-enfriamiento-velux.jpg"
+										alt="Sistema de enfriamiento de VeLux"
 										class="img-fluid"
 									/>
 								</figure>
 								<!-- <h6 class="color-primary-ultracel_q text-center">Fase de inflamación</h6> -->
+								<p class="text-center color-white mt-2">
+									La piel se enfría antes y durante el tratamiento.
+								</p>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<figure>
 									<img
-										src="assets/img/products/coresculpt/icon-2veces-semana.png"
-										alt="Tratamiento 2 veces por semana"
+										src="assets/img/products/velux/etapa-ondas_dobles-velux.jpg"
+										alt="Smart Target Motion de VeLux"
 										class="img-fluid"
 									/>
 								</figure>
+
+								<p class="text-center color-white mt-2">
+									Las ondas dobles se concentran en un solo rayo láser que escanea y llega al
+									folículo piloso.(Smart Target Motion)
+								</p>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<figure>
 									<img
-										src="assets/img/products/coresculpt/icon-4a6sesiones.png"
-										alt="De 4 a 6 semanas de tratamiento CoreSculpt"
+										src="assets/img/products/velux/etapa-eritema-velux.jpg"
+										alt="Zona tratada con VeLux"
 										class="img-fluid"
 									/>
 								</figure>
+
+								<p class="text-center color-white mt-2">
+									Puede aparecer un leve eritema y edema en las zonas tratadas.
+								</p>
+							</div>
+							<div class="col-md-3">
+								<figure>
+									<img
+										src="assets/img/products/velux/etapa-vello_desaparece-velux.jpg"
+										alt="Depilación efectiva con VeLux "
+										class="img-fluid"
+									/>
+								</figure>
+
+								<p class="text-center color-white mt-2">
+									El vello comenzará a desaparecer de forma natural.
+								</p>
 							</div>
 						</div>
-						<div class="row">
+					</div>
+					<div class="container">
+						<div class="row mt-2">
 							<div class="col-md-12">
-								<h3 class="text-center color-white mb-4">
-									La pieza de mano genera pulsaciones Electromagnéticas. <br />El paciente sólo se
-									recuesta en una cama durante 30 minutos por área a tratar. <br />Sólo son 4
-									sesiones por 2 semanas.
-								</h3>
+								<p class="text-center color-white destacado">
+									La tecnología <strong>Smart Target Motion</strong> suministrará la energía en 5
+									zonas diferentes en orden aleatorio y hará que el tratamiento sea prácticamente
+									indoloro y bastante tolerable durante el proceso.
+								</p>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<!-- <section id="videos-section" class="section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12 titlebar no-mobile">
-              <h2 class="text-center color-blue-light">Videos</h2>
+				<section id="ultra-delgado" class="section">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="text-center mb-4">
+									Ventajas de <strong class="color-primary-velux">VeLux</strong>
+								</h3>
+								<!-- <h3 class="text-center text-primary-dark mb-2 fadeInDown animation-delay-5"><strong class="color-primary-ultracel_q">ULTRA</strong> DELGADO</h3> -->
+								<!-- <p class="text-center destacado"><strong>ULTRAcel Q+</strong> te brinda hasta 65% de mejor visibilidad en el área de tratamiento para un procedimiento seguro y conveniente.</p> -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-12">
+								<h5 class="text-center color-secondary-velux">Alta velocidad y Flexibilidad</h5>
 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 offset-md-4 col-12">
-              <h6 class="mt80-video-mobile txt-18">CoreSculpt</h6>
-              <div class="card">
-                <div data-plyr-provider="youtube" data-plyr-embed-id="5WvEAfAv6Z0" class="js-player"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+								<figure class="text-center grafica">
+									<img
+										src="assets/img/products/velux/flexibilidad-VeLux.png"
+										alt="Alta velocidad y flexibilidad de VeLux"
+										class="img-fluid"
+									/>
+								</figure>
+								<p class="text-center mt-2">
+									El gran tamaño del punto ofrecerá un tratamiento rápido del vello gracias a su
+									tecnología de escaneo en movimiento. Su tamaño de escaneo es ajustable de 50 a 10
+									mm para una aplicación fácil y sencilla dirigida a pequeñas áreas de la cara y el
+									cuerpo. Además, la exclusiva y magnética punta facial conectable hace que sea más
+									fácil y cómodo llegar a zonas estrechas de 10 por 15 mm para obtener un resultado
+									excelente.
+								</p>
+							</div>
+							<div class="col-md-4 col-12">
+								<h5 class="text-center color-secondary-velux">Doble longitud de onda</h5>
+
+								<figure class="text-center grafica">
+									<img
+										src="assets/img/products/velux/Doble-Longitud-de-onda-grafica-velux.png"
+										alt="Doble longitud de onda de VeLux"
+										class="img-fluid"
+									/>
+								</figure>
+								<p class="text-center mt-2">
+									Al aprovechar todas las ventajas de la penetración profunda y la alta tasa de
+									absorción de energía de 2 longitudes de onda diferentes de láser de 808 y 755nm,
+									VeLux775 será capaz de ofrecer una amplia gama de cobertura de tratamiento seguro
+									para todos los tipos de piel y vello, incluso los de color claro y vello fino
+								</p>
+							</div>
+							<div class="col-md-4 col-12">
+								<h5 class="text-center color-secondary-velux">Potente refrigeración y comodidad</h5>
+
+								<figure class="text-center grafica">
+									<img
+										src="assets/img/products/velux/enfriamiento-VeLux.png"
+										alt="Enfrimiento de VeLux"
+										class="img-fluid"
+									/>
+								</figure>
+								<p class="text-center mt-2">
+									La combinación de la potente tecnología de enfriamiento por contacto de la punta
+									de zafiro y la tecnología de escaneo de movimiento proporciona el beneficio óptimo
+									del tratamiento de depilación sin anestésicos ni geles en comparación con su
+									sistema de láser de depilación de diodo convencional. Además, el profesional puede
+									elegir un adaptador de refrigeración por aire adicional para el vello fino o la
+									piel sensible, que ofrece una mayor comodidad durante el tratamiento.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
 				<div id="casos-clinicos" class="section">
 					<div class="container">
@@ -666,9 +537,8 @@
 							<div class="col-md-12">
 								<h2>ANTES Y <strong>DESPUÉS</strong></h2>
 								<p class="destacado">
-									Con <strong>CoreSculpt</strong> obtendrás los mejores resultados en Modelado
-									Corporal, al esculpir eficazmente áreas como abdomen, hombro, muslos, glúteo y
-									más.
+									Con <strong>VeLux</strong> lograrás los mejores resultados en depilación mediante
+									un tratamiento seguro, cómodo y efectivo para tus pacientes.
 								</p>
 							</div>
 						</div>
@@ -683,13 +553,13 @@
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteB_1.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-01.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en abdomen con CoreSculpt"
+																data-title="Depilación en brazo con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteB_1.jpg"
-																	alt="Tratamiento en abdomen con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-01-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -699,7 +569,9 @@
 											</div>
 											<div class="col-md-8 col-12 no-mobile">
 												<p>
-													<strong>Abdomen</strong><br /><!-- <strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 29 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 6 sesiones
 												</p>
 											</div>
 										</div>
@@ -711,13 +583,13 @@
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteC_1.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-03.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en abdomen con CoreSculpt"
+																data-title="Depilación en pectoral con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteC_1-thumb.jpg"
-																	alt="Tratamiento en abdomen con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-03-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -727,8 +599,9 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Abdomen</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo III | Masculino | 40 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 6 sesiones
 												</p>
 											</div>
 										</div>
@@ -740,13 +613,13 @@
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteD_1.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-05.jpg"
 																data-lightbox="gallery"
-																data-title="atamiento en glúteos con CoreSculpt"
+																data-title="Depilación en piernas con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteD_1-thumb.jpg"
-																	alt="Tratamiento en glúteos con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-05-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -756,26 +629,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Glúteos</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 29 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 3 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteE_1.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-07.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en torso con CoreSculpt"
+																data-title="Depilación en brazos con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteE_1-thumb.jpg"
-																	alt="Tratamiento en torso con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-07-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -785,26 +659,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Torso</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 50 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 4 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteE_3.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-09.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en glúteos con CoreSculpt"
+																data-title="Depilación en brazos con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteE_3-thumb.jpg"
-																	alt="Tratamiento en glúteos con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-09-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -814,72 +689,16 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Glúteos</strong
-													><!-- <br><strong>Observaciones: </strong> -->
-												</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="row">
-											<div class="col-md-4">
-												<div class="card">
-													<div class="card-block p-05">
-														<div class="withripple">
-															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteF_1.jpg"
-																data-lightbox="gallery"
-																data-title="Tratamiento en abdomen con CoreSculpt"
-															>
-																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteF_1-thumb.jpg"
-																	alt="Tratamiento en abdomen con CoreSculpt"
-																	class="img-fluid"
-																/>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-8 no-mobile">
-												<p>
-													<strong>Abdomen</strong
-													><!-- <br><strong>Observaciones: </strong> -->
-												</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="row">
-											<div class="col-md-4">
-												<div class="card">
-													<div class="card-block p-05">
-														<div class="withripple">
-															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteA.jpg"
-																data-lightbox="gallery"
-																data-title="Tratamiento en espalda con CoreSculpt"
-															>
-																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteA-thumb.jpg"
-																	alt="Tratamiento en espalda con CoreSculpt"
-																	class="img-fluid"
-																/>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-8 no-mobile">
-												<p>
-													<strong>Espalda</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 27 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 4 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 								</ul>
 							</div>
+							<!--col-md-6  -->
 							<div class="col-md-6 col-6">
 								<ul class="clinic-cases-list list-unstyled">
 									<li>
@@ -889,42 +708,13 @@
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteB_2.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-02.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en abdomen con CoreSculpt"
+																data-title="Depilación en piernas con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteB_2.jpg"
-																	alt="Tratamiento en abdomen con CoreSculpt"
-																	class="img-fluid"
-																/>
-															</a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-8 col-12 no-mobile">
-												<p>
-													<strong>Abdomen</strong
-													><!-- <br><strong>Observaciones: </strong> -->
-												</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="row">
-											<div class="col-md-4">
-												<div class="card">
-													<div class="card-block p-05">
-														<div class="withripple">
-															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteC_2.jpg"
-																data-lightbox="gallery"
-																data-title="Tratamiento en abdomen con CoreSculpt"
-															>
-																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteC_2-thumb.jpg"
-																	alt="Tratamiento en abdomen con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-02-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -934,26 +724,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Abdomen</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Masculino | 32 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 6 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteD_2.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-04.jpg"
 																data-lightbox="gallery"
-																data-title="atamiento en glúteos con CoreSculpt"
+																data-title="Depilación en brazos con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteD_2-thumb.jpg"
-																	alt="Tratamiento en glúteos con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-04-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -963,26 +754,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Glúteos</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 38 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 3 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteE_2.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-06.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en torso con CoreSculpt"
+																data-title="Depilación en brazos con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteE_2-thumb.jpg"
-																	alt="Tratamiento en torso con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-06-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -992,26 +784,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Torso</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo IV | Femenino | 21 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 3 sesiones
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteE_4.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-08.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en glúteos con CoreSculpt"
+																data-title="Depilación en brazos con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteE_4-thumb.jpg"
-																	alt="Tratamiento en glúteos con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-08-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -1021,26 +814,27 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Glúteos</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo II | Femenino | 23 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 1 sesión
 												</p>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-md-4 col-12">
 												<div class="card">
 													<div class="card-block p-05">
 														<div class="withripple">
 															<a
-																href="assets/img/casos-clinicos/coresculpt/Core_PacienteF_2.jpg"
+																href="assets/img/casos-clinicos/velux/Velux_Casos-10.jpg"
 																data-lightbox="gallery"
-																data-title="Tratamiento en Glúteos con CoreSculpt"
+																data-title="Depilación en piernas con VeLux"
 															>
 																<img
-																	src="assets/img/casos-clinicos/coresculpt/Core_PacienteF_2-thumb.jpg"
-																	alt="Tratamiento en Glúteos con CoreSculpt"
+																	src="assets/img/casos-clinicos/velux/Velux_Casos-10-thumb.jpg"
+																	alt="Depilación con VeLux"
 																	class="img-fluid"
 																/>
 															</a>
@@ -1050,8 +844,9 @@
 											</div>
 											<div class="col-md-8 no-mobile">
 												<p>
-													<strong>Glúteos</strong
-													><!-- <br><strong>Observaciones: </strong> -->
+													<strong>Fototipo III | Masculino | 27 años</strong><br /><strong
+														>Observaciones: </strong
+													>Resultados en 3 sesines
 												</p>
 											</div>
 										</div>
@@ -1059,18 +854,28 @@
 								</ul>
 							</div>
 						</div>
-						<!--row-->
-						<div class="row">
-							<!-- <div class="col-md-4 col-12 offset-md-4">
-          		<div>
-                	<a href="assets/articulos-clinicos/abstract-cellec-v.pdf" class="btn btn-raised btn-primary btn-brochure" target="_blank">VER ARTÍCULO CLÍNICO</a>
-              	</div>
-          	</div> -->
-						</div>
-						<!--row-->
 					</div>
 				</div>
 				<!--.section-->
+
+				<!-- <section id="videos-section" class="section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 titlebar no-mobile">
+              <h2 class="text-center color-blue-light">Videos</h2>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 offset-md-4 col-12">
+              <h6 class="mt80-video-mobile txt-18">Velux</h6>
+              <div class="card">
+                <div data-plyr-provider="youtube" data-plyr-embed-id="5WvEAfAv6Z0" class="js-player"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
 				<section
 					id="data-sheet"
@@ -1084,8 +889,8 @@
 									<!-- <div class="col-6"> -->
 									<figure class="logo-product">
 										<img
-											src="assets/img/products/coresculpt/CoreSculpt-logo-color.png"
-											alt="Logotipo de CoreSculpt"
+											src="assets/img/products/velux/logo-velux-color.png"
+											alt="Logotipo de LIPO1060"
 											class="img-fluid"
 										/>
 									</figure>
@@ -1105,41 +910,56 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td><strong>Número de modelo</strong></td>
-												<td>MST-1002</td>
+												<td><strong>Longitud de onda</strong></td>
+												<td>Combina 755 & 808nm</td>
 											</tr>
 											<tr>
-												<td><strong>Tipo de energía</strong></td>
-												<td>Campo Magnético</td>
+												<td><strong>Densidad de energía</strong></td>
+												<td>Máx. 2,499 W/cm<sup>2</sup></td>
+												<!-- <td>09 W/cm<sup>2</sup> ~ 1.4W/cm<sup>2</sup> 20%</td> -->
 											</tr>
 											<tr>
-												<td><strong>Duración del Pulso</strong></td>
-												<td>400𝝻s</td>
+												<td><strong>Fluencia</strong></td>
+												<td>Hasta 100J/cm<sup>2</sup></td>
 											</tr>
 											<tr>
-												<td><strong>Intensidad del Campo Magnético</strong></td>
-												<td>3 Tesla</td>
+												<td><strong>Duración del pulso</strong></td>
+												<td>Min. 3ms ~ Máx. 150ms</td>
 											</tr>
 											<tr>
-												<td><strong>Consumo Máximo de Energía</strong></td>
-												<td>3.3kVA</td>
+												<td><strong>Tamaño de punto</strong></td>
+												<td>15x10, 15x20, 15x30, 15x40, 15x50 (nm)</td>
 											</tr>
-
 											<tr>
-												<td><strong>Requerimientos de electricidad</strong></td>
-												<td>110V</td>
+												<td><strong>Energía eléctrica</strong></td>
+												<td>100 - 240VAC, 50/60Hz, 1.3kVA</td>
 											</tr>
-
+											<tr>
+												<td><strong>Dimensiones (mm)</strong></td>
+												<td>691(W) x 1260(H) x 343(L)</td>
+											</tr>
+											<tr>
+												<td><strong>Peso</strong></td>
+												<td>Aprox. 60 Kg</td>
+											</tr>
+											<tr>
+												<td><strong>Tipo de protección para descargas eléctricas</strong></td>
+												<td>CLASE 1/Tipo B</td>
+											</tr>
+											<tr>
+												<td><strong>Grado contra descargas eléctricas</strong></td>
+												<td>Clase de seguridad IV para productos de Láser IEC60825-1 (2014)</td>
+											</tr>
 											<tr>
 												<td><strong>COFEPRIS</strong></td>
-												<td>Registro Sanitario: 0276E2023 SSA</td>
+												<td>Registro Sanitario: 0275E2023 SSA</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 								<div class="download-brochure">
 									<a
-										href="assets/brochures/brochure-CoreSculpt.pdf"
+										href="assets/brochures/brochure-VeLux.pdf"
 										class="btn btn-raised btn-primary btn-brochure"
 										target="_blank"
 										>DESCARGAR FOLLETO</a
@@ -1158,9 +978,9 @@
 									<h4>QUIERO MÁS INFORMACIÓN</h4>
 								</div>
 								<form
-									id="form-equipo-coresculpt"
+									id="form-equipo-velux"
 									method="post"
-									action="contact-equipment-coresculpt.php"
+									action="contact-equipment.php"
 									class="container-fluid contactEqpmnt"
 								>
 									<div class="row" style="display: none">
@@ -1171,11 +991,12 @@
 											id="contactSubject"
 											value="Interés en <?php echo $device; ?>"
 										/>
+										<input type="text" name="whatsAppLink" id="whatsAppLink" />
 										<input
 											type="text"
 											name="localUrl"
 											id="localUrl"
-											value="<?php echo strtolower(str_replace(' ', '-', $device)); ?>.php"
+											value="<?php echo strtolower(str_replace(' ', '-', $device));?>.php"
 										/>
 									</div>
 									<div class="row">
@@ -1256,13 +1077,11 @@
 									</div>
 									<div class="row">
 										<div class="col-sm-12">
-											<label for="">Teléfono (10 dígitos)</label>
 											<input
-												type="tel"
+												type="text"
 												id="contactPhone"
 												name="phone"
 												placeholder="Tel&eacute;fono*"
-												pattern="[0-9]{10}"
 												required
 											/>
 										</div>
@@ -1296,7 +1115,7 @@
 													Sí, quiero suscribirme a la lista de Medestore
 												</label>
 											</div>
-											<input type="hidden" name="recaptcha_response" class="recaptchaResponse" />
+											<input type="hidden" name="recaptcha_response" id="recaptchaResponse" />
 											<button
 												type="submit"
 												class="btn btn-raised btn-primary btn-lg"
@@ -1339,7 +1158,138 @@
 			</div>
 		</div>
 		<!-- ms-site-container -->
-		<?php include('menu_left.php'); ?>
+		<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+			<div class="sb-slidebar-container">
+				<header class="ms-slidebar-header">
+					<div class="ms-slidebar-title">
+						<div class="ms-slidebar-t">
+							<img src="assets/img/LogoMede_Blanco.svg" alt="" />
+						</div>
+					</div>
+				</header>
+				<ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+					<li>
+						<a class="link" href="#"> <i class="icon-home"></i> Inicio</a>
+					</li>
+					<li class="card" role="tab" id="sch2">
+						<a
+							class="collapsed"
+							role="button"
+							data-toggle="collapse"
+							href="#sc2"
+							aria-expanded="false"
+							aria-controls="sc2"
+						>
+							<i class="icon-diamond"></i> Premium
+						</a>
+						<ul
+							id="sc2"
+							class="card-collapse collapse"
+							role="tabpanel"
+							aria-labelledby="sch2"
+							data-parent="#slidebar-menu"
+						>
+							<li>
+								<a href="depilacion.html">Depilación</a>
+							</li>
+							<li>
+								<a href="rejuvenecimiento-facial.html">Rejuvenecimiento facial</a>
+							</li>
+							<li>
+								<a href="pigmentaciones.html">Pigmentaciones</a>
+							</li>
+							<li>
+								<a href="acne.html">Acné</a>
+							</li>
+							<li>
+								<a href="reductivos.html">Reductivos</a>
+							</li>
+							<li>
+								<a href="celulitis.html">Celulitis</a>
+							</li>
+							<li>
+								<a href="estrias.html">Estrías</a>
+							</li>
+							<li>
+								<a href="reafirmantes-corporales.html">Reafirmantes corporales</a>
+							</li>
+
+							<li>
+								<a href="hifu.html">HIFU</a>
+							</li>
+							<li>
+								<a href="radiofrecuencia.html">Radiofrecuencia</a>
+							</li>
+							<li>
+								<a href="laser.html">Láser</a>
+							</li>
+							<li>
+								<a href="criolipolisis.html">Criolipólisis</a>
+							</li>
+							<li>
+								<a href="ipl.html">IPL</a>
+							</li>
+							<li>
+								<a href="plasma.html">Plasma</a>
+							</li>
+							<li>
+								<a href="electroporacion.html">Electroporación</a>
+							</li>
+							<li>
+								<a href="hidra-dermoabrasion.html">Hidra-dermoabrasión</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a class="link" href="monalisa/"> <i class="zmdi zmdi-view-compact"></i> MONALISA</a>
+					</li>
+					<li>
+						<a class="link" href="cellmula/"> <i class="zmdi zmdi-view-compact"></i> CELLMULA</a>
+					</li>
+
+					<li>
+						<a class="link" href="soporte.php"> <i class="zmdi zmdi-library"></i> Soporte</a>
+					</li>
+					<li>
+						<a class="link" href="contacto.php"> <i class="icon-envelope"></i> Contacto</a>
+					</li>
+				</ul>
+				<div class="ms-slidebar-social ms-slidebar-block">
+					<h4 class="ms-slidebar-block-title">Social Links</h4>
+					<div class="ms-slidebar-social">
+						<a
+							href="https://www.facebook.com/medestore/"
+							class="btn-circle btn-circle-raised btn-facebook"
+						>
+							<i class="fa-brands fa-facebook-f"></i>
+							<div class="ripple-container"></div>
+						</a>
+						<a
+							href="https://www.instagram.com/medestoremx/"
+							class="btn-circle btn-circle-raised btn-instagram"
+						>
+							<i class="fa-brands fa-instagram"></i>
+							<div class="ripple-container"></div>
+						</a>
+						<a
+							href="https://twitter.com/Medestoremx"
+							class="btn-circle btn-circle-raised btn-twitter"
+						>
+							<i class="fa-brands fa-x-twitter"></i>
+							<div class="ripple-container"></div>
+						</a>
+						<a
+							href="https://www.youtube.com/user/MedeStore"
+							class="btn-circle btn-circle-raised btn-google"
+						>
+							<i class="fa-brands fa-youtube"></i>
+							<div class="ripple-container"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="whatsapp-chat_wrapper">
 			<form method="post" action="whatsAppHandler.php">

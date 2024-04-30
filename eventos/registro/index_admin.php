@@ -23,7 +23,7 @@
     $queryCongress = "Select C.congresos_ID as ID, C.congresos_nombre as 'Nombre Congreso' from congresos as C inner join asistentes as A on A.asistentes_congreso = C.congresos_ID where C.congresos_deshabilitado = 0 group by C.congresos_nombre having COUNT(A.asistentes_congreso) > 0 order by congresos_ID desc";
     $resultCongress = mysqli_query($connect, $queryCongress);
 
-    $queryAssist = "Select C.congresos_nombre as 'Nombre Congreso', R.registros_nombre as 'Nombre', R.registros_apellido as 'Apellido', R.registros_correo as 'Correo', R.registros_telefono as 'Teléfono', R.registros_estado as 'Estado', A.asistentes_asesor as 'Asesor de ventas', A.asistentes_producto as 'Producto de interés', A.asistentes_comentarios as 'Notas' from asistentes as A inner join registros as R on A.asistentes_usuario = R.registros_ID inner join congresos as C on A.asistentes_congreso = C.congresos_ID order by C.congresos_ID desc, A.asistentes_ID desc";
+    $queryAssist = "Select C.congresos_nombre as 'Nombre Congreso', R.registros_nombre as 'Nombre', R.registros_apellido as 'Apellido', R.registros_correo as 'Correo', R.registros_telefono as 'Teléfono', R.registros_estado as 'Estado', A.asistentes_asesor as 'Asesor de ventas', A.asistentes_producto as 'Producto de interés', A.asistentes_comentarios as 'Notas', A.asistentes_fecha_registro as 'Fecha registro' from asistentes as A inner join registros as R on A.asistentes_usuario = R.registros_ID inner join congresos as C on A.asistentes_congreso = C.congresos_ID order by C.congresos_ID desc, A.asistentes_ID desc";
     $resultAssist = mysqli_query($connect, $queryAssist);
     $contAssist = 1;
 
@@ -274,22 +274,26 @@
                                 <th>Asesor de ventas</th>
                                 <th>Producto de interés</th>
                                 <th>Nota</th>
+                                <th>Fecha registro</th>
+                                <th>Hora registro</th>
                               </tr>
                             </thead>
                             <tbody>
                               <?php if($resultAssist) while($rowAssist = mysqli_fetch_array($resultAssist)):;?>
-                                  <tr>
-                                      <td><?php echo $contAssist++;?></td>
-                                      <td><?php echo $rowAssist[0];?></td>
-                                      <td><?php echo $rowAssist[1];?></td>
-                                      <td><?php echo $rowAssist[2];?></td>
-                                      <td><?php echo $rowAssist[3];?></td>
-                                      <td><?php echo $rowAssist[4];?></td>
-                                      <td><?php echo $rowAssist[5];?></td>
-                                      <td><?php echo $rowAssist[6];?></td>
-                                      <td><?php echo $rowAssist[7];?></td>
-                                      <td><?php echo $rowAssist[8];?></td>
-                                  </tr>
+																<tr>
+																	<td><?php echo $contAssist++;?></td>
+																	<td><?php echo $rowAssist[0];?></td>
+																	<td><?php echo $rowAssist[1];?></td>
+																	<td><?php echo $rowAssist[2];?></td>
+																	<td><?php echo $rowAssist[3];?></td>
+																	<td><?php echo $rowAssist[4];?></td>
+																	<td><?php echo $rowAssist[5];?></td>
+																	<td><?php echo $rowAssist[6];?></td>
+																	<td><?php echo $rowAssist[7];?></td>
+																	<td><?php echo $rowAssist[8];?></td>
+																	<td><?php echo date('d-m-Y', strtotime($rowAssist[9]));?></td> 
+																	<td><?php echo date('H:i', strtotime($rowAssist[9]));?></td>
+																</tr>
                               <?php endwhile;?>
                             </tbody>
                           </table>

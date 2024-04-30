@@ -42,7 +42,7 @@
 	}
 
 	if (isset($_POST["export-assist"])){
-		$queryCodes = "Select C.congresos_nombre as 'Nombre Congreso', R.registros_nombre as 'Nombre', R.registros_apellido as 'Apellido', R.registros_correo as 'Correo', R.registros_telefono as 'Telefono', R.registros_estado as 'Estado', A.asistentes_asesor as 'Asesor de ventas', A.asistentes_producto as 'Producto de interés', A.asistentes_comentarios as 'Notas' from asistentes as A inner join registros as R on A.asistentes_usuario = R.registros_ID inner join congresos as C on A.asistentes_congreso = C.congresos_ID where C.congresos_ID = " . $_POST['eventAssistantsCongressId'] . " order by A.asistentes_ID desc";
+		$queryCodes = "Select C.congresos_nombre as 'Nombre Congreso', R.registros_nombre as 'Nombre', R.registros_apellido as 'Apellido', R.registros_correo as 'Correo', R.registros_telefono as 'Telefono', R.registros_estado as 'Estado', A.asistentes_asesor as 'Asesor de ventas', A.asistentes_producto as 'Producto de interés', A.asistentes_comentarios as 'Notas', A.asistentes_fecha_registro as 'Fecha registro' from asistentes as A inner join registros as R on A.asistentes_usuario = R.registros_ID inner join congresos as C on A.asistentes_congreso = C.congresos_ID where C.congresos_ID = " . $_POST['eventAssistantsCongressId'] . " order by A.asistentes_ID desc";
     $resultCodes = mysqli_query($connect, $queryCodes);
 		$filename = "asistentes_congreso.xls";
 		header("Content-Type: application/vnd.ms-excel");

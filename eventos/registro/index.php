@@ -120,37 +120,37 @@
               <div class="card-body">
                 <figure style="width: 300px; margin: 0px auto;">
                   <?php
-                    if($logo == 1) echo '<img src="'.$props[2].'" alt="" class="img-fluid">';
+                    if($logo == 1) echo '<img src="'.$props[2].'" alt="" class="img-fluid" style="width:100%; height: auto;">';
                     else echo '<h6 class="animated zoomInDown animation-delay-5" style="font-size: 30px;font-weight: 400;">'.$props[3].'</h6>'
                   ?>
                 </figure>
                 <h1 class="color-primary text-center"></h1>
-                <form class="form-horizontal custom-form" method = "post">
+                <form class="form-horizontal custom-form" method = "post" autocomplete="off">
                   <fieldset>
                     <div class="form-group row">
-                      <label for="register_fname" class="col-md-3 control-label">Nombre</label>
+                      <label for="firstName" class="col-md-3 control-label">Nombre</label>
                       <div class="col-md-9">
-                        <input type="text" class="form-control" id="register_fname" placeholder="Nombre" name = "register_fname" required tabindex="1"> </div>
+                        <input type="text" class="form-control" id="firstName" placeholder="Nombre" name = "firstName" required tabindex="1"> </div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_lname" class="col-md-3 control-label">Apellido</label>
+                      <label for="lastName" class="col-md-3 control-label">Apellido</label>
                       <div class="col-md-9">
-                        <input type="text" class="form-control" id="register_lname" name = "register_lname" placeholder="Apellido" required tabindex="2"></div>
+                        <input type="text" class="form-control" id="lastName" name = "lastName" placeholder="Apellido" required tabindex="2"></div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_mail" class="col-md-3 control-label">Email</label>
+                      <label for="email" class="col-md-3 control-label">Email</label>
                       <div class="col-md-9">
-                        <input type="email" class="form-control" id="register_mail" name = "register_mail" placeholder="Email" required tabindex="3"> </div>
+                        <input type="email" class="form-control" id="email" name = "email" placeholder="Email" required tabindex="3"> </div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_phone" class="col-md-3 control-label">Teléfono</label>
+                      <label for="phone" class="col-md-3 control-label">Teléfono</label>
                       <div class="col-md-9">
-                        <input type="text" class="form-control" id="register_phone" name = "register_phone" placeholder="Teléfono" tabindex="4"> </div>
+                        <input type="text" class="form-control" id="phone" name = "phone" placeholder="Teléfono" tabindex="4"> </div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_specialty" class="col-md-3 control-label">Especialidad</label>
+                      <label for="speciality" class="col-md-3 control-label">Especialidad</label>
                       <div class="col-md-9">
-                        <select id="inputEsp" class="form-control selectpicker" data-live-search="true" data-dropup-auto="false" name = "register_specialty" required tabindex="5">
+                        <select id="inputEsp" class="form-control selectpicker" data-live-search="true" data-dropup-auto="false" name = "speciality" required tabindex="5">
                           <option  value="" disabled selected>Selecciona una</option>
                           <option  value="Dermatología">Dermatología</option>
                           <option  value="Cirugía Plástica">Cirugía Plástica</option>
@@ -162,9 +162,9 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_state" class="col-md-3 control-label">Provincia</label>
+                      <label for="state" class="col-md-3 control-label">Provincia</label>
                       <div class="col-md-9">
-                        <select id="inputState" class="form-control selectpicker" data-live-search="true" data-dropup-auto="false" name = "register_state" required tabindex="6">
+                        <select id="inputState" class="form-control selectpicker" data-live-search="true" data-dropup-auto="false" name = "state" required tabindex="6">
                           <!-- <option  value="Buenos Aires">Buenos Aires</option>
                           <option  value="Catamarca">Catamarca</option>
                           <option  value="Chaco">Chaco</option>
@@ -225,19 +225,19 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_seller" class="col-md-3 control-label">Asesor de ventas</label>
+                      <label for="seller" class="col-md-3 control-label">Asesor de ventas</label>
                       <div class="col-md-9">
-                        <input type="text" class="form-control" id="register_seller" name = "register_seller" placeholder="Asesor de ventas" tabindex="7"></div>
+                        <input type="text" class="form-control" id="seller" name = "seller" placeholder="Asesor de ventas" tabindex="7"></div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_product" class="col-md-3 control-label">Producto de interés</label>
+                      <label for="product" class="col-md-3 control-label">Producto de interés</label>
                       <div class="col-md-9">
-                        <input type="text" class="form-control" id="register_product" name = "register_product" placeholder="Producto de interés" tabindex="8"></div>
+                        <input type="text" class="form-control" id="product" name = "product" placeholder="Producto de interés" tabindex="8"></div>
                     </div>
                     <div class="form-group row">
-                      <label for="register_comments" class="col-md-3 control-label">Notas</label>
+                      <label for="comments" class="col-md-3 control-label">Notas</label>
                       <div class="col-md-9">
-                        <textarea name="register_comments" id="register_comments" class="form-control" placeholder="Ingresa notas" tabindex="9"></textarea>
+                        <textarea name="comments" id="comments" class="form-control" placeholder="Ingresa notas" tabindex="9"></textarea>
                     </div>
                   </fieldset>
                   <p style="color:#000; font-size: 18px; text-align: center;"><!-- <strong>Nota:</strong>  El ganador se dará a conocer el 30 de enero en una transmisión en vivo en las redes oficiales de MedeStore, Biodiet y Kliniken. Se contactará al ganador por WhatsApp y este deberá enviar una fotografía del gafete con su nombre, para comprobar su asistencia al evento.--></p>
@@ -260,10 +260,6 @@
 
         <aside class="ms-footbar section fp-auto-height">
         <div class="container">
-
-
-
-
           <div class="row">
             <div class="col-lg-4 ms-footer-col">
               <div class="ms-footbar-block">
