@@ -105,7 +105,6 @@ if ($recaptcha->score >= 0.7) {
 
 	if (!mail($targetEmail, $subject, $message, $headers)) {
 		$errorCode = 'EC-1001';
-		break;
 	}
 } else $errorCode = 'EC-1002';
 
