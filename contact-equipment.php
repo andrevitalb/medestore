@@ -113,7 +113,9 @@ if ($recaptcha->score >= 0.7) {
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#333" />
 		<title>Contacto Medestore</title>
+		<link rel="shortcut icon" href="assets/img/favicon.png" />
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'>
 		<style>
 		* {
