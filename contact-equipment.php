@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include('dbConnection.php');
 $errorCode = '';
 
@@ -107,18 +107,146 @@ if ($recaptcha->score >= 0.7) {
 		$errorCode = 'EC-1001';
 	}
 } else $errorCode = 'EC-1002';
-
-if ($errorCode == '') echo "<body><link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'><a href='/$localUrl' id='returnLink'>< Regresar</a><div><div><img src='https://www.medestore.mx/assets/img/logo_medestore-color.png' alt='Logo Medestore'id='medestoreLogo'></div><h1>Mensaje Enviado</h1><h4>Gracias por ponerte en contacto con nosotros.<br>En breve uno de nuestros especialistas se comunicará contigo.<br>O envía mensaje a tu vendedor asignado</h4><a href='$whatsAppLink' target='_blank' id='whatsApp'>Contacto <img src='assets/img/whatsapp-icon.png' alt='WhatsApp'id='whatsAppIcon'></a></div><style>* {font-family: Raleway, sans-serif;}body {margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}#returnLink {display: block;position: absolute;top: 1.25rem;left: 1.25rem;text-decoration: none;font-weight: 700;}#medestoreLogo {width: 25rem;display: inline-block;margin: 0 0 5rem;}h1 {font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4 {font-size: 32px;font-weight: 400;margin: 0;}#whatsApp {display: inline-flex;align-items: center;padding: 1rem 2rem;background-color: #0FC244;margin-top: 1rem;color: #fff;border-radius: 15px;text-decoration: none;font-weight: 700;}#whatsAppIcon {width: 25px;display: inline-block;margin-left: 10px;}</style></body>";
-else echo "<body><link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'><div><div><img src='https://www.medestore.mx/assets/img/logo_medestore-color.png' alt='Logo Medestore'></div><h1>Ocurrió un problema</h1><h4>Por favor, vuelve a intentar mandar tu mensaje. $errorCode</h4></div><style>body{margin: 0;padding: 0;background-color: #fff;background-size: cover;height: 100vh;width: 100vw;}body>div {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: block;text-align: center;width: 85%;}img{width: 25rem;display: inline-block;margin: 0 0 5rem;}h1{font-family: Raleway, sans-serif;font-size: 50px;font-weight: 700;text-transform: uppercase;display: inline-block;color: #000;margin: 0 0 1.5rem;}h4{font-size: 32px;font-family: Raleway, sans-serif;font-weight: 400;margin: 0;}</style><meta http-equiv='refresh' content='2.5;URL=$url'/></body>";
 ?>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33467298-1"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contacto Medestore</title>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap' rel='stylesheet'>
+		<style>
+		* {
+			font-family: Raleway, sans-serif;
+		}
 
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			background-size: cover;
+			height: 100vh;
+			width: 100vw;
+		}
 
-	gtag('config', 'UA-33467298-1');
-</script>
+		body>div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			text-align: center;
+			width: 85%;
+		}
+
+		h1 {
+			font-size: 50px;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: inline-block;
+			color: #000;
+			margin: 0 0 1.5rem;
+		}
+
+		h4 {
+			font-size: 32px;
+			font-weight: 400;
+			margin: 0;
+		}
+
+		#medestoreLogo {
+			width: 25rem;
+			display: inline-block;
+			margin: 0 0 5rem;
+		}
+
+		#returnLink {
+			display: block;
+			position: absolute;
+			top: 1.25rem;
+			left: 1.25rem;
+			text-decoration: none;
+			font-weight: 700;
+		}
+
+		#whatsApp {
+			display: inline-flex;
+			align-items: center;
+			padding: 1rem 2rem;
+			background-color: #0FC244;
+			margin-top: 1rem;
+			color: #fff;
+			border-radius: 15px;
+			text-decoration: none;
+			font-weight: 700;
+		}
+
+		#whatsAppIcon {
+			width: 25px;
+			display: inline-block;
+			margin-left: 10px;
+		}
+		</style>
+	</head>
+	<body>
+		<?php
+			if ($errorCode == '') echo "
+				<a href='/$localUrl' id='returnLink'>
+					< Regresar
+				</a>
+				<div>
+					<div>
+						<img
+							src='assets/img/logo_medestore-color.png'
+							alt='Logo Medestore'
+							id='medestoreLogo'
+						>
+					</div>
+					<h1>Mensaje Enviado</h1>
+					<h4>
+						Gracias por ponerte en contacto con nosotros.<br>
+						En breve uno de nuestros especialistas se comunicará contigo.<br>
+						O envía mensaje a tu vendedor asignado
+					</h4>
+					<a
+						href='$whatsAppLink'
+						target='_blank'
+						id='whatsApp'
+					>
+						Contacto 
+						<img
+							src='assets/img/whatsapp-icon.png'
+							alt='WhatsApp'
+							id='whatsAppIcon'
+						>
+					</a>
+				</div>
+			";
+			else echo "
+				<div>
+					<div>
+						<img 
+							src='assets/img/logo_medestore-color.png'
+							alt='Logo Medestore'
+							id='medestoreLogo'
+						>
+					</div>
+					<h1>Ocurrió un problema</h1>
+					<h4>Por favor, vuelve a intentar mandar tu mensaje. $errorCode</h4>
+				</div>
+				<meta http-equiv='refresh' content='2.5;URL=$url'/>
+			";
+		?>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33467298-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-33467298-1');
+		</script>
+	</body>
+</html>
