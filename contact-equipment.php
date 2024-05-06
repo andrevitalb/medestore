@@ -52,54 +52,54 @@ if ($recaptcha->score >= 0.7) {
 	$headers .= "Cc: ventas.medestore@medestore.odoo.com, leadsmedestore@gmail.com\r\n";
 
 	$message = "
-			<html>
-			<head>
-			<title>$subject</title>
-			</head>
-			<body>
-			<table width='50%' border='0' align='center' cellpadding='0' cellspacing='0'>
-			<tr>
-			<td colspan='2' align='center' valign='top'><img style=' width: 250px; margin-top: 15px; ' src='https://www.medestore.mx/assets/img/Logo-MedeStore.png'></td>
-			</tr>
-			<tr>
-			<td width='50%' align='right'>&nbsp;</td>
-			<td align='left'>&nbsp;</td>
-			</tr>
-			<tr>
-			<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Nombre:</strong></td>
-			<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$firstName $lastName</td>
-			</tr>
-			<tr>
-			<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Teléfono:</strong></td>
-			<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$phone</td>
-			</tr>
-			<tr>
-			<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Email:</strong></td>
-			<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$mail</td>
-			</tr>
-			<tr>
-			<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Especialidad:</strong></td>
-			<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$speciality</td>
-			</tr>
-			<tr>
-			<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Estado:</strong></td>
-			<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$state</td>
-			</tr>
-			<tr>
-			<td colspan='2' align='center' valign='top' style='font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Enviado el:</strong> " . date('d-m-Y H:i:s') . "</td>
-			</tr>
-			<tr>
-			<td width='50%' align='right'>&nbsp;</td>
-			<td align='left'>&nbsp;</td>
-			</tr>
-			<tr>
-			<td width='50%' align='right'>&nbsp;</td>
-			<td align='left'>&nbsp;</td>
-			</tr>
-			</table>
-			</body>
-			</html>
-			";
+		<html>
+		<head>
+		<title>$subject</title>
+		</head>
+		<body>
+		<table width='50%' border='0' align='center' cellpadding='0' cellspacing='0'>
+		<tr>
+		<td colspan='2' align='center' valign='top'><img style=' width: 250px; margin-top: 15px; ' src='https://www.medestore.mx/assets/img/Logo-MedeStore.png'></td>
+		</tr>
+		<tr>
+		<td width='50%' align='right'>&nbsp;</td>
+		<td align='left'>&nbsp;</td>
+		</tr>
+		<tr>
+		<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Nombre:</strong></td>
+		<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$firstName $lastName</td>
+		</tr>
+		<tr>
+		<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Teléfono:</strong></td>
+		<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$phone</td>
+		</tr>
+		<tr>
+		<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Email:</strong></td>
+		<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$mail</td>
+		</tr>
+		<tr>
+		<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Especialidad:</strong></td>
+		<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$speciality</td>
+		</tr>
+		<tr>
+		<td align='right' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Estado:</strong></td>
+		<td align='left' valign='top' style='border-top:1px solid #dfdfdf; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 0 7px 5px;'>$state</td>
+		</tr>
+		<tr>
+		<td colspan='2' align='center' valign='top' style='font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000; padding:7px 5px 7px 0;'><strong>Enviado el:</strong> " . date('d-m-Y H:i:s') . "</td>
+		</tr>
+		<tr>
+		<td width='50%' align='right'>&nbsp;</td>
+		<td align='left'>&nbsp;</td>
+		</tr>
+		<tr>
+		<td width='50%' align='right'>&nbsp;</td>
+		<td align='left'>&nbsp;</td>
+		</tr>
+		</table>
+		</body>
+		</html>
+	";
 
 	$targetEmail = "contacto@medestore.mx";
 
