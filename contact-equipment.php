@@ -12,7 +12,6 @@ $recaptcha = file_get_contents($recaptchaUrl . '?secret=' . $recaptchaSecret . '
 $recaptcha = json_decode($recaptcha);
 
 if ($recaptcha->score >= 0.7) {
-	$section = $_POST['department'];
 	$subject = $_POST['subject'];
 
 	$state = $_POST['state'];
