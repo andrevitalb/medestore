@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include('dbConnection.php');
 $errorCode = '';
 
@@ -46,10 +46,10 @@ if ($recaptcha->score >= 0.7) {
 	)";
 	$resultContact = mysqli_query($connect, $queryContact);
 
-	$headers = "MIME-Version: 1.0" . "\r\n";
-	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	$headers = "MIME-Version: 1.0\r\n";
+	$headers .= "Content-type:text/html;charset=UTF-8\r\n";
 	$headers .= "From: $firstName $lastName <$mail>\r\n";
-	$headers .= 'Cc: ventas.medestore@medestore.odoo.com, leadsmedestore@gmail.com' . "\r\n";
+	$headers .= "Cc: ventas.medestore@medestore.odoo.com, leadsmedestore@gmail.com\r\n";
 
 	$message = "
 			<html>
