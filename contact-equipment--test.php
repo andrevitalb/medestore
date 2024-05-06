@@ -48,7 +48,7 @@ if ($recaptcha->score >= 0.7) {
 	$headers = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8\r\n";
 	$headers .= "From: $firstName $lastName <$mail>\r\n";
-	$headers .= "Cc: ventas.medestore@medestore.odoo.com, leadsmedestore@gmail.com\r\n";
+	// $headers .= "Cc: ventas.medestore@medestore.odoo.com, leadsmedestore@gmail.com\r\n";
 
 	$message = "
 		<html>
@@ -100,7 +100,7 @@ if ($recaptcha->score >= 0.7) {
 		</html>
 	";
 
-	$targetEmail = "contacto@medestore.mx";
+	$targetEmail = "test56@mailinator.com";
 
 	if (!mail($targetEmail, $subject, $message, $headers)) {
 		$errorCode = 'EC-1001';
